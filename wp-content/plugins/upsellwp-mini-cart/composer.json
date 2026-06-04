@@ -1,0 +1,28 @@
+{
+  "name": "upsellwp/upsellwp-mini-cart",
+  "description": "UpsellWP Mini-cart WordPress plugin",
+  "version": "1.0.0",
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "type": "wordpress-plugin",
+  "authors": [
+    {
+      "name": "Team UpsellWP",
+      "email": "team@upsellwp.com"
+    }
+  ],
+  "license": "GPL-3.0-or-later",
+  "autoload": {
+    "psr-4": {
+      "UWPMC\\": "",
+      "UWPMC\\App\\": "app/"
+    }
+  },
+  "scripts": {
+    "cs": "phpcs --standard=phpcs.xml .",
+    "cbf": "phpcbf --standard=phpcs.xml ."
+  },
+  "require": {
+    "ext-json": "*"
+  }
+}

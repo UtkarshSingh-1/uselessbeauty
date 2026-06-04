@@ -1,0 +1,851 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+ #error {display: none;}
+ /* Button used to open the contact form - fixed at the bottom of the page */
+ .wps-on-boarding-form-submit {
+  text-align: center;
+}
+.wps-on-boarding-wrapper-control {
+  overflow: hidden;
+}
+.wps-on-boarding-submit {
+  background-color: #7979f6;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+}
+/* Add styles to the form container */
+.wps-on-boarding-wrapper {
+  padding: 10px;
+  background-color: white;
+}
+/* Set a style for the submit/login button */
+.wps-on-boarding-wrapper .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+.wps-form-single-field {
+  background: #1fe2e2;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 6px;
+}
+.on-boarding-label {
+  color: red;
+  font-size: 12px;
+}
+.on-boarding-field-label {
+  color: green;
+  font-size: 12px;
+}
+/*==========================================
+=            WPS POPUP FORM CSS            =
+==========================================*/
+* {
+  box-sizing: border-box;
+}
+.keep_hidden {
+  display: none;
+}
+.wps-wpr-onboarding-section,
+.wps-wpr-second-onboarding-section {
+  position: fixed;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 100000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: scroll;
+  height: 100%;
+  display: none;
+}
+
+.wps-wpr-first-on-boarding-wrapper-background,
+.wps-on-second-boarding-wrapper-background {
+    content: "";
+    left: 0;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 25px;
+    right: 0;
+    transition: 0.5s linear all;
+    width: 100%;
+    z-index: 999;
+    position: relative;
+    transform: translateY(-100%);
+}
+
+body.wps-wpr-onboarding-open #wps_rwpr_setting_wrapper.wps-rma-admin-wrap .wps_rwpr_navigator_template,
+body.wps-wpr-onboarding-open #wps_rwpr_setting_wrapper.wps-rma-admin-wrap .wps_rwpr_tabs,
+body.wps-wpr-onboarding-open #wps_rwpr_setting_wrapper.wps-rma-admin-wrap .wps_rma_more_tabs {
+  visibility: hidden !important;
+}
+
+body.wps-wpr-onboarding-open #wps_rwpr_setting_wrapper.wps-rma-admin-wrap .hubwoo-navigations,
+body.wps-wpr-onboarding-open #wps_rwpr_setting_wrapper.wps-rma-admin-wrap .wps_rwpr_navigator_template .inner-wrapper-sticky,
+body.wps-wpr-onboarding-open #wps_rwpr_setting_wrapper.wps-rma-admin-wrap .wps_rwpr_navigator_template .sticky-sidebar {
+  display: none !important;
+}
+.deactivate-onboard-popup-show,
+.onboard-onboard-popup-show {
+    transform: translateY(5%);
+    transition: 0.5s linear all;
+}
+.wps-on-boarding-wrapper {
+  padding: 25px 15px;
+}
+.wps-on-boarding-heading {
+  font-size: 30px;
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
+}
+.wps-on-boarding-desc {
+  color: #808080;
+  font-size: 16px;
+  margin: 0 auto;
+  max-width: 450px;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+}
+.wps-on-boarding-close-btn {
+  border-radius: 50%;
+  border: 2px solid #0073aa;
+  content: "";
+  display: inline-block;
+  height: 30px;
+  position: absolute;
+  right: 32px;
+  text-align: center;
+  top: 31px;
+  width: 30px;
+}
+.wps-on-boarding-close-btn a {
+  display: block;
+  font-size: 20px;
+  line-height: 22px;
+  text-decoration: none;
+}
+.wps-form-single-field {
+  background: #ffffff;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 5px 5px;
+}
+.on-boarding-label {
+  color: rgba(0,0,0,0.7);
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0 0 15px 0;
+}
+.on-boarding-field-label {
+  color: rgba(0,0,0,0.6);
+}
+.wps-wpr-onboarding-section input[type="email"],
+.wps-wpr-second-onboarding-section input[type="email"] {
+  padding: 5px;
+  width: 100%;
+  max-height: 44px !important;
+}
+.wps-wpr-onboarding-section input[type="text"],
+.wps-wpr-second-onboarding-section input[type="text"] {
+  padding: 5px;
+  width: 100%;
+}
+.wps-on-boarding-checkbox-wrapper {
+  margin: 0 0 10px 0;
+}
+.wps-wpr-onboarding-section input[type="checkbox"],
+.wps-wpr-second-onboarding-section input[type="checkbox"] {
+  margin:0 15px 0 0;
+}
+.wps-wpr-onboarding-section input[type="radio"],
+.wps-wpr-second-onboarding-section input[type="radio"] {
+  margin:0 10px 0 0 !important;
+}
+.wps-on-boarding-radio-wrapper {
+  display: inline-block;
+  max-width:24%;
+  width: 100%;
+}
+.on-boarding-select-field {
+  min-height: 43px !important;
+  width: 100%;
+  max-width: inherit !important;
+}
+.wps_rwpr_main_template .select2-search-field {
+  width: 100%;
+}
+.wps_rwpr_main_template .select2-search-choice {
+  background: #ffffff !important;
+  box-shadow: none !important;
+}
+.wps_rwpr_main_template .select2-search-choice {
+  float: none !important;
+  padding: 10px !important;
+  text-align: left;
+}
+.wps_rwpr_main_template .select2-search-choice div{
+  margin-left: 20px;
+}
+.wps_rwpr_main_template .select2-search-choice-close {
+  left: 6px !important;
+  top: 11px !important;
+}
+select#how-you-use {
+  max-width: 100% !important;
+  padding: 10px;
+  width: 100%;
+}
+input#s2id_autogen1 {
+  border:1px solid #7e8993;
+  border-radius: 3px;
+  padding: 6px;
+  width: 100% !important;
+  color: #32373c !important;
+  font-family: inherit !important;
+  font-size: 15px;
+}
+.wps_rwpr_main_template .select2-choices {
+  border:none !important;
+}
+.on-boarding-label:last-child {
+  color: #3389bf !important;
+  font-weight: 600;
+}
+.wps-on-boarding-form-btn__wrapper {
+  text-align: center;
+}
+.wps-on-boarding-verify {
+  background: #016cb0;
+  border: 2px solid transparent !important;
+  color: #ffff;
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+  text-transform: uppercase;
+}
+.wps-on-boarding-no_thanks, .wps-deactivation-no_thanks {
+  background-color: #ffff;
+  color: #016cb0 !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.wps-on-boarding-form-submit {
+  display: inline-block;
+  margin: 0 auto;
+  max-width: 300px !important;
+  width: 100%;
+}
+.wps-on-boarding-submit {
+  border: none;
+  color: white;
+  cursor: pointer;
+  opacity: 0.8;
+  padding: 16px 20px;
+  width: 100%;
+}
+.wps-on-boarding-submit{
+  border-radius: 3px;
+}
+.wps-on-boarding-form-verify {
+  margin: 0 20px 0 110px;
+  position: relative;
+}
+.wps-on-boarding-form-verify:after {
+  -moz-transition: transform 0.3s ease-out;
+  -ms-transition: transform 0.3s ease-out;
+  -o-transition: transform 0.3s ease-out;
+  -webkit-transition: transform 0.3s ease-out;
+  color: #ffffff;
+  content: "\279E"; // arrow right unicode
+  display: inline-block;
+  display: inline-block;
+  font-size: 20px;
+  position: absolute;
+  right: 18px;
+  top: 19px;
+  transition: transform 0.3s ease-out;
+}
+.wps-on-boarding-form-verify:hover::after {
+ -moz-transform: translateX(4px);
+ -ms-transform: translateX(4px);
+ -o-transform: translateX(4px);
+ -webkit-transform: translateX(4px);
+ transform: translateX(4px);
+}
+.wps-on-boarding-form-no_thanks {
+  text-align: end;
+}
+.deactivate-onboard-popup-show,
+.onboard-onboard-popup-show {
+  display: block;
+}
+.wps-form-single-field:nth-child(3) {
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: 97%;
+  width: 100%;
+}
+.wps-form-single-field:nth-child(4) {
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: 97%;
+  width: 100%;
+}
+.wps-on-boarding-form-btn__wrapper {
+  margin: 20px 0 0 0;
+}
+.wps-on-boarding-form-no_thanks {
+  display: inline-block;
+  float: right;
+  margin: 20px 20px 0 0px;
+}
+.wps_rwpr_main_template .select2-search-choice {
+  padding: 10px !important;
+}
+.onboard-popup-body-control {
+  overflow: hidden;
+}
+.wps_rwpr_main_template input.select2-search__field {
+    width: 100% !important;
+}
+.wps_rwpr_main_template li.select2-search.select2-search--inline {
+    width: 100% !important;
+}
+/*=====  End of WPS POPUP FORM CSS  ======*/
+/*=====================================
+=            MEDIA QUERIES            =
+=====================================*/
+@media only screen and (max-width: 992px) {
+ .wps-form-single-field:first-child {
+  width: 96%;
+}
+.wps-form-single-field:nth-child(2) {
+  width: 96%;
+}
+.wps_rwpr_main_template input#s2id_autogen1 {
+  width: 100% !important;
+}
+.wps_rwpr_main_template input#s2id_autogen1 {
+  width: 100% !important;
+}
+.wps_rwpr_main_template input[type="email"] {
+  width: 99% !important;
+}
+select#how-you-use {
+  display: block !important;
+  max-width: 100%;
+  width: 100% !important;
+}
+.wps_rwpr_main_template input#s2id_autogen1 {
+  width: 100%;
+}
+.wps_rwpr_main_template input[type="text"] {
+    width: 99%;
+  }
+} 
+@media only screen and (max-width: 796px) {
+  .wps-form-single-field:nth-child(3) {
+    display: block;
+    max-width: 97%;
+    width: 100%;
+  }
+  .wps-form-single-field:nth-child(4) {
+    display:block;
+    max-width: 97%;
+    width: 100%;
+  }
+  .wps_rwpr_main_template input[type="text"] {
+    width: 99%;
+  }
+}
+@media only screen and (max-width: 620px) {
+  .wps-on-boarding-form-verify  {
+    display: block !important;
+    margin:15px auto !important;
+  }
+  .wps-on-boarding-form-no_thanks {
+    float:none !important;
+    margin:0 !important;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .wps-on-boarding-radio-wrapper {
+    margin-bottom: 15px;
+    max-width: 100%;
+    width: 100%;
+  }
+  .wps_rwpr_main_template input[type="email"] {
+    width: 99% !important;
+  }
+  .wps-on-boarding-close-btn {
+    right:35px;
+    top:33px;
+  }
+}
+@media only screen and (max-width: 405px) {
+  .wps-on-boarding-form-submit {
+    max-width: 100% !important;
+    padding: 15px 10px;
+    width: 100%;
+    margin: 0 20px 0 0 !important;
+  }
+  .wps-on-boarding-form-verify:after {
+    right: 25px;
+    top: 32px;
+  }
+  .wps_rwpr_main_template input[type="email"] {
+    width: 96% !important;
+  }
+  .wps-form-single-field:nth-child(2) {
+    width: 93%;
+  }
+  .wps-form-single-field:nth-child(3) {
+    display: block;
+    max-width: 97%;
+    width: 100%;
+  }
+  .wps-form-single-field:nth-child(4) {
+    display:block;
+    max-width: 94%;
+    width: 100%;
+  }
+   .wps-on-boarding-form-verify  {
+    display: block !important;
+    text-align: center !important;
+    margin: 0 20px 0 0px !important;
+  }
+}
+/*=====  End of MEDIA QUERIES  ======*/
+
+/*deactivating popup css*/
+
+.wps-deactivating-radio-wrapper {
+    margin: 0 0 10px 0;
+}
+
+.wps-wpr-img-youtube{
+  margin-right: 6px;
+  max-width: 17px;
+  vertical-align: middle;
+}
+
+.wps-info-img{
+  margin-right: 6px;
+  max-width: 15px;
+  vertical-align: middle;
+}
+
+a.wps-wpr-go-pro {
+  background: #05d5d8;
+  color: white;
+  font-weight: 700;
+  padding: 2px 5px;
+  border: 1px solid #05d5d8;
+  border-radius: 5px;
+}
+
+.wps-offer-notice.notice.notice-warning {
+  padding: 0;
+  border: none;
+  margin-left: 2px;
+  margin-right: 20px;
+}
+.wps-offer-notice.notice.notice-warning a img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/*end of deactivating popup css*/
+
+/*==========================================
+=    ONBOARDING MODAL REDESIGN (RMA UI)   =
+==========================================*/
+body.wps-wpr-onboarding-open {
+  overflow: hidden;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal {
+  align-items: flex-start;
+  backdrop-filter: blur(3px);
+  background: rgba(17, 10, 36, 0.58);
+  overflow-x: hidden;
+  padding: 20px 10px 28px;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-on-second-boarding-wrapper-background {
+  margin: 0 auto;
+  max-width: 920px;
+  padding: 0;
+  transform: none !important;
+  width: calc(100% - 14px);
+  z-index: 100001;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-on-second-boarding-wrapper-background.onboard-onboard-popup-show {
+  display: block;
+  transform: none !important;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-on-boarding-wrapper {
+  background: #f6f2ff;
+  border: 1px solid #ddd2f5;
+  border-radius: 28px;
+  box-shadow: 0 24px 52px rgba(29, 18, 55, 0.22);
+  padding: 22px;
+  position: relative;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-on-boarding-close-btn {
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #d9cff4;
+  border-radius: 999px;
+  display: inline-flex;
+  height: 40px;
+  justify-content: center;
+  margin: 0;
+  position: absolute;
+  right: 18px;
+  top: 16px;
+  width: 40px;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-on-boarding-close-btn a {
+  color: #4b3a72;
+  font-size: 30px;
+  line-height: 32px;
+  text-decoration: none;
+  width: 100%;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-on-boarding-close-btn .close-form {
+  display: block;
+  font-family: NunitoSans-Bold, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  margin-top: -2px;
+  text-transform: uppercase;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-rma-onboarding-modal__header {
+  margin-bottom: 12px;
+  padding: 8px 60px 8px;
+  text-align: center;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-on-boarding-heading {
+  color: #1f1638;
+  font-family: NunitoSans-ExtraBold, sans-serif;
+  font-size: 52px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  margin: 0 0 10px;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-on-boarding-desc {
+  color: #7b7192;
+  font-family: NunitoSans-Regular, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 0 auto;
+  max-width: 620px;
+  padding: 0;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-rma-onboarding-modal__panel {
+  background: #ffffff;
+  border: 1px solid #ddd2f5;
+  border-radius: 24px;
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+  padding: 20px;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-rma-onboarding-modal__form {
+  align-content: start;
+  justify-content: start;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: minmax(0, 1fr);
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-form-single-field {
+  background: transparent;
+  border-radius: 0;
+  clear: both;
+  display: block;
+  margin: 0;
+  max-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-form-single-field:nth-child(3),
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-form-single-field:nth-child(4) {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .on-boarding-label {
+  color: #1f1638;
+  font-family: NunitoSans-ExtraBold, sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.35;
+  margin: 0 0 10px;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-form-single-field:first-child {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-form-single-field:first-child > .on-boarding-label {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-on-boarding-radio-wrapper {
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #dccff5;
+  border-radius: 14px;
+  box-sizing: border-box;
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  max-width: 100%;
+  min-height: 46px;
+  padding: 10px 12px;
+  width: 100%;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal input.on-boarding-radio-field[type="radio"] {
+  accent-color: #6a4ee9;
+  margin: 0 !important;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .on-boarding-field-label {
+  color: #4a3a72;
+  font-family: NunitoSans-Bold, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .on-boarding-select-field,
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal input.on-boarding-email-field,
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal input.on-boarding-text-field {
+  background: #ffffff;
+  border: 1px solid #dccff5;
+  border-radius: 14px;
+  box-shadow: none;
+  color: #35255e;
+  font-family: NunitoSans-Regular, sans-serif;
+  font-size: 14px;
+  min-height: 50px;
+  padding: 12px 14px;
+  width: 100%;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .on-boarding-select-field:focus,
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal input.on-boarding-email-field:focus,
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal input.on-boarding-text-field:focus {
+  border-color: #cdbdf0;
+  box-shadow: 0 0 0 3px rgba(163, 137, 225, 0.12);
+  outline: 0;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .select2-container {
+  max-width: 100%;
+  width: 100% !important;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .select2-container-multi .select2-choices {
+  background: #ffffff;
+  border: 1px solid #dccff5;
+  border-radius: 14px;
+  box-shadow: none;
+  min-height: 50px;
+  padding: 6px 8px;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .select2-container-multi.select2-container-active .select2-choices {
+  border-color: #cdbdf0;
+  box-shadow: 0 0 0 3px rgba(163, 137, 225, 0.12);
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .select2-container-multi .select2-search-choice {
+  align-items: center;
+  background: #f5efff !important;
+  border: 1px solid #dfd3f6 !important;
+  border-radius: 999px;
+  color: #35255e !important;
+  display: inline-flex;
+  font-family: NunitoSans-Bold, sans-serif;
+  font-size: 12px;
+  margin: 3px 6px 3px 0;
+  min-height: 30px;
+  padding: 6px 10px 6px 24px !important;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .select2-container-multi .select2-search-choice-close {
+  left: 8px !important;
+  top: 50% !important;
+  transform: translateY(-50%);
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .select2-container-multi .select2-search-field input {
+  font-family: NunitoSans-Regular, sans-serif !important;
+  font-size: 14px !important;
+  margin: 0 !important;
+  min-height: 36px;
+  padding: 4px 0 !important;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-on-boarding-form-btn__wrapper {
+  align-items: center;
+  clear: both;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin: 0 !important;
+  padding-top: 0;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-on-boarding-form-submit {
+  float: none !important;
+  margin: 0;
+  max-width: none !important;
+  width: auto;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-on-boarding-form-verify {
+  margin: 0;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-on-boarding-form-verify:after {
+  display: none;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-on-boarding-submit,
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-on-boarding-verify {
+  background: #000000 !important;
+  border: 0 !important;
+  border-radius: 14px !important;
+  color: #ffffff !important;
+  font-family: NunitoSans-ExtraBold, sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  min-height: 46px !important;
+  min-width: 168px;
+  opacity: 1;
+  padding: 10px 22px !important;
+  text-transform: none;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-on-boarding-form-no_thanks {
+  display: inline-flex;
+  float: none;
+  margin: 0 !important;
+  text-align: right;
+}
+
+.wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-on-boarding-no_thanks {
+  color: #4b3a72 !important;
+  display: inline-flex;
+  font-family: NunitoSans-ExtraBold, sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-on-boarding-heading {
+    font-size: 42px;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-on-boarding-wrapper {
+    border-radius: 20px;
+    padding: 16px;
+  }
+
+  .wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-rma-onboarding-modal__header {
+    padding: 6px 46px 10px;
+  }
+
+  .wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-rma-onboarding-modal__panel {
+    border-radius: 18px;
+    padding: 16px;
+  }
+
+  .wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-form-single-field:first-child {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .wps-wpr-second-onboarding-section.wps-rma-onboarding-modal {
+    padding: 12px 6px 18px;
+  }
+
+  .wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-on-second-boarding-wrapper-background {
+    width: calc(100% - 6px);
+  }
+
+  .wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-on-boarding-heading {
+    font-size: 34px;
+  }
+
+  .wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-on-boarding-desc {
+    font-size: 14px;
+  }
+
+  .wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-form-single-field:first-child {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-on-boarding-form-btn__wrapper {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-on-boarding-form-submit,
+  .wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-on-boarding-submit,
+  .wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-on-boarding-verify {
+    width: 100%;
+  }
+
+  .wps-wpr-second-onboarding-section.wps-rma-onboarding-modal .wps-on-boarding-form-no_thanks {
+    justify-content: center;
+    width: 100%;
+  }
+}

@@ -1,0 +1,14 @@
+@import "main";
+
+##{$plugin_slug}-admin {
+  @import "components/pro/repeaters";
+  @import "components/pro/selects";
+
+  .#{$plugin_slug}-admin-common-layout {
+    .arabic-font {
+      @apply w-1/5;
+
+      max-width: 20% !important;
+    }
+  }
+}

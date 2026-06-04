@@ -1,0 +1,2071 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+
+/**
+ * Manually forked from SUIT CSS Base: https://github.com/suitcss/base
+ * A thin layer on top of normalize.css that provides a starting point more
+ * suitable for web applications.
+ */
+
+/**
+ * Removes the default spacing and border for appropriate elements.
+ */
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+button {
+  background-color: transparent;
+  background-image: none;
+  padding: 0;
+}
+
+/**
+ * Work around a Firefox/IE bug where the transparent `button` background
+ * results in a loss of the default `button` focus styles.
+ */
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Tailwind custom reset styles
+ */
+
+/**
+ * 1. Use the user's configured `sans` font-family (with Tailwind's default
+ *    sans-serif font stack as a fallback) as a sane default.
+ * 2. Use Tailwind's default "normal" line-height so the user isn't forced
+ *    to override it to ensure consistency even when using the default theme.
+ */
+
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
+  line-height: 1.5; /* 2 */
+}
+
+/**
+ * 1. Prevent padding and border from affecting element width.
+ *
+ *    We used to set this in the html element and inherit from
+ *    the parent element for everything else. This caused issues
+ *    in shadow-dom-enhanced elements like <details> where the content
+ *    is wrapped by a div with box-sizing set to `content-box`.
+ *
+ *    https://github.com/mozdevs/cssremedy/issues/4
+ *
+ *
+ * 2. Allow adding a border to an element by just adding a border-width.
+ *
+ *    By default, the way the browser specifies that an element should have no
+ *    border is by setting it's border-style to `none` in the user-agent
+ *    stylesheet.
+ *
+ *    In order to easily add borders to elements by just setting the `border-width`
+ *    property, we change the default border-style for all elements to `solid`, and
+ *    use border-width to hide them instead. This way our `border` utilities only
+ *    need to set the `border-width` property instead of the entire `border`
+ *    shorthand, making our border utilities much more straightforward to compose.
+ *
+ *    https://github.com/tailwindcss/tailwindcss/pull/116
+ */
+
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #999999; /* 2 */
+}
+
+/*
+ * Ensure horizontal rules are visible by default
+ */
+
+hr {
+  border-top-width: 1px;
+}
+
+/**
+ * Undo the `border-style: none` reset that Normalize applies to images so that
+ * our `border-{width}` utilities have the expected effect.
+ *
+ * The Normalize reset is unnecessary for us since we default the border-width
+ * to 0 on all elements.
+ *
+ * https://github.com/tailwindcss/tailwindcss/issues/362
+ */
+
+img {
+  border-style: solid;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #a0aec0;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #a0aec0;
+}
+
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+  color: #a0aec0;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #a0aec0;
+}
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/**
+ * Reset links to optimize for opt-in styling instead of
+ * opt-out.
+ */
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/**
+ * Reset form element properties that are easy to forget to
+ * style explicitly so you don't inadvertently introduce
+ * styles that deviate from your design system. These styles
+ * supplement a partial reset that is already applied by
+ * normalize.css.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+}
+
+/**
+ * Use the configured 'mono' font family for elements that
+ * are expected to be rendered with a monospace font, falling
+ * back to the system monospace stack if there is no configured
+ * 'mono' font family.
+ */
+
+pre,
+code,
+kbd,
+samp {
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/**
+ * Make replaced elements `display: block` by default as that's
+ * the behavior you want almost all of the time. Inspired by
+ * CSS Remedy, with `svg` added as well.
+ *
+ * https://github.com/mozdevs/cssremedy/issues/14
+ */
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  vertical-align: middle;
+}
+
+/**
+ * Constrain images and videos to the parent width and preserve
+ * their instrinsic aspect ratio.
+ *
+ * https://github.com/mozdevs/cssremedy/issues/14
+ */
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/*tailwind start components */
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/*tailwind end components */
+
+.border-blue-100 {
+  --border-opacity: 1;
+  border-color: #324760;
+  border-color: rgba(50, 71, 96, var(--border-opacity));
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.inline-flex {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex-row {
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+
+.flex-col {
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.flex-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.items-end {
+  -ms-flex-align: end;
+      align-items: flex-end;
+}
+
+.items-center {
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.justify-center {
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.justify-between {
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.flex-grow {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+}
+
+.flex-shrink-0 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.font-playfair {
+  font-family: Playfair Display, serif;
+}
+
+.font-couriernew {
+  font-family: Courier New, serif;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-xs {
+  font-size: .75rem;
+}
+
+.text-sm {
+  font-size: .875rem;
+}
+
+.text-base {
+  font-size: 1rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.text-2xxl {
+  font-size: 3.25rem;
+}
+
+.leading-none {
+  line-height: 1;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.-mx-4 {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.mr-0 {
+  margin-right: 0;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mr-4 {
+  margin-right: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
+}
+
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.pr-2 {
+  padding-right: 0.5rem;
+}
+
+.pb-16 {
+  padding-bottom: 4rem;
+}
+
+.pt-20 {
+  padding-top: 5rem;
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.static {
+  position: static;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.relative {
+  position: relative;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-orange-100 {
+  --text-opacity: 1;
+  color: #f77355;
+  color: rgba(247, 115, 85, var(--text-opacity));
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-1\/3 {
+  width: 33.333333%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+*{
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-tap-highlight-color:transparent
+}
+
+.dashicons-before{
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-align:center;
+      align-items:center;
+  -ms-flex-pack:center;
+      justify-content:center
+}
+
+.dashicons-before::before{
+  padding:0 !important
+}
+
+.dashicons-before img{
+  padding:0 !important;
+  border:none;
+  width:auto;
+  margin:0 auto
+}
+
+#wpwrap{
+  --bg-opacity: 1;
+  background-color: #f0f0f1;
+  background-color: rgba(240, 240, 241, var(--bg-opacity))
+}
+
+#bulletinwp-admin{
+  font-size: .875rem;
+  --text-opacity: 1;
+  color: #324760;
+  color: rgba(50, 71, 96, var(--text-opacity));
+  line-height: 1.5
+}
+
+#bulletinwp-admin h1,#bulletinwp-admin h2,#bulletinwp-admin h3,#bulletinwp-admin h4{
+  --text-opacity: 1;
+  color: #324760;
+  color: rgba(50, 71, 96, var(--text-opacity));
+  font-family: Playfair Display, serif;
+  font-weight: 700;
+  line-height: 1.25;
+  padding: 0
+}
+
+#bulletinwp-admin h1,#bulletinwp-admin h2{
+  display:inline;
+  background-image:-webkit-gradient(linear, left top, left bottom, from(#f77355), to(#f77355));
+  background-image:-webkit-linear-gradient(#f77355, #f77355);
+  background-image:-o-linear-gradient(#f77355, #f77355);
+  background-image:linear-gradient(#f77355, #f77355);
+  background-size:100% 8px;
+  background-position:0 85%;
+  background-repeat:no-repeat
+}
+
+#bulletinwp-admin h1{
+  font-size: 3.25rem
+}
+
+#bulletinwp-admin h2{
+  font-size: 2.125rem
+}
+
+#bulletinwp-admin h3{
+  font-size: 1.875rem
+}
+
+#bulletinwp-admin h4{
+  font-size: 1.5rem
+}
+
+#bulletinwp-admin a{
+  --text-opacity: 1;
+  color: #f77355;
+  color: rgba(247, 115, 85, var(--text-opacity));
+  text-decoration: underline
+}
+
+#bulletinwp-admin a:focus{
+  outline: 0;
+  -webkit-box-shadow:none;
+          box-shadow:none
+}
+
+#bulletinwp-admin a:hover{
+  text-decoration: none
+}
+
+#bulletinwp-admin img{
+  border-style: none
+}
+
+#bulletinwp-admin blockquote{
+  font-family: Playfair Display, serif;
+  font-weight: 700;
+  line-height: 1.25;
+  font-size: 2.375rem;
+  margin:1em auto
+}
+
+#bulletinwp-admin .wrap{
+  margin-top: 2rem
+}
+
+#bulletinwp-admin .wp-heading-inline{
+  font-size: 1.5rem;
+  background-image:none
+}
+
+#bulletinwp-admin .widefat td{
+  font-weight: 400
+}
+
+#select2-bulletinwp-select-icon-set-results{
+  max-height:350px
+}
+
+#select2-bulletinwp-select-icon-set-results li{
+  border:2px solid black;
+  float:left;
+  width:125px;
+  height:125px;
+  padding:5px;
+  margin:4px;
+  background-size:50%;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-color:transparent;
+  color:#222;
+  -webkit-transition:all 0.2s ease;
+  -o-transition:all 0.2s ease;
+  transition:all 0.2s ease
+}
+
+#select2-bulletinwp-select-icon-set-results li.select2-results__option[aria-selected="true"]{
+  -webkit-box-shadow:inset 0 0 0 3px #f77355;
+          box-shadow:inset 0 0 0 3px #f77355;
+  color:#222 !important
+}
+
+#select2-bulletinwp-select-icon-set-results li:first-child{
+  display:none
+}
+
+#select2-bulletinwp-select-icon-set-results li:nth-child(2){
+  background-image:url(images/announcement.svg)
+}
+
+#select2-bulletinwp-select-icon-set-results li:nth-child(3){
+  background-image:url(images/book.svg)
+}
+
+#select2-bulletinwp-select-icon-set-results li:nth-child(4){
+  background-image:url(images/briefcase.svg)
+}
+
+#select2-bulletinwp-select-icon-set-results li:nth-child(5){
+  background-image:url(images/calander.svg)
+}
+
+#select2-bulletinwp-select-icon-set-results li:nth-child(6){
+  background-image:url(images/chat.svg)
+}
+
+#select2-bulletinwp-select-icon-set-results li:nth-child(7){
+  background-image:url(images/check-circle.svg)
+}
+
+#select2-bulletinwp-select-icon-set-results li:nth-child(8){
+  background-image:url(images/clip.svg)
+}
+
+#select2-bulletinwp-select-icon-set-results li:nth-child(9){
+  background-image:url(images/clock.svg)
+}
+
+#select2-bulletinwp-select-icon-set-results li:nth-child(10){
+  background-image:url(images/cookie-black.svg)
+}
+
+#select2-bulletinwp-select-icon-set-results li:nth-child(11){
+  background-image:url(images/emotion-happy.svg)
+}
+
+#select2-bulletinwp-select-icon-set-results li:nth-child(12){
+  background-image:url(images/emotion-sad.svg)
+}
+
+#select2-bulletinwp-select-icon-set-results li:nth-child(13){
+  background-image:url(images/exclamation.svg)
+}
+
+#select2-bulletinwp-select-icon-set-results li:nth-child(14){
+  background-image:url(images/heart.svg)
+}
+
+#select2-bulletinwp-select-icon-set-results li:nth-child(15){
+  background-image:url(images/help.svg)
+}
+
+#select2-bulletinwp-select-icon-set-results li:nth-child(16){
+  background-image:url(images/information.svg)
+}
+
+#select2-bulletinwp-select-icon-set-results li:nth-child(17){
+  background-image:url(images/key.svg)
+}
+
+#select2-bulletinwp-select-icon-set-results li:nth-child(18){
+  background-image:url(images/location.svg)
+}
+
+#select2-bulletinwp-select-icon-set-results li:nth-child(19){
+  background-image:url(images/moon.svg)
+}
+
+#select2-bulletinwp-select-icon-set-results li:nth-child(20){
+  background-image:url(images/music.svg)
+}
+
+#select2-bulletinwp-select-icon-set-results li:nth-child(21){
+  background-image:url(images/notification.svg)
+}
+
+#select2-bulletinwp-select-icon-set-results li:nth-child(22){
+  background-image:url(images/rocket.svg)
+}
+
+#select2-bulletinwp-select-icon-set-results li:nth-child(23){
+  background-image:url(images/star.svg)
+}
+
+#select2-bulletinwp-select-icon-set-results li:nth-child(24){
+  background-image:url(images/thumb-up.svg)
+}
+
+#select2-bulletinwp-select-icon-set-results li:nth-child(25){
+  background-image:url(images/trophy.svg)
+}
+
+#select2-bulletinwp-user-role-results li.locked-tag{
+  pointer-events: none;
+  --text-opacity: 1;
+  color: #999999;
+  color: rgba(153, 153, 153, var(--text-opacity))
+}
+
+#select2-bulletinwp-user-role-results li.locked-tag.select2-results__option--highlighted{
+  --bg-opacity: 1;
+  background-color: #dddddd;
+  background-color: rgba(221, 221, 221, var(--bg-opacity))
+}
+
+#bulletinwp-admin .bulletinwp-admin-common-layout label{
+  display: inline-block
+}
+
+#bulletinwp-admin .bulletinwp-admin-common-layout input.form-input{
+  border-radius: 0.125rem;
+  height: 2.5rem;
+  width: 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  line-height: 1;
+  --text-opacity: 1;
+  color: #000;
+  color: rgba(0, 0, 0, var(--text-opacity))
+}
+
+#bulletinwp-admin .bulletinwp-admin-common-layout textarea.form-input{
+  border-radius: 0.125rem;
+  padding: 0.5rem;
+  width: 100%;
+  height:76px
+}
+
+#bulletinwp-admin .bulletinwp-admin-common-layout .form-field-notice{
+  display: table;
+  --bg-opacity: 1;
+  background-color: #fee2e2;
+  background-color: rgba(254, 226, 226, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #b91c1c;
+  color: rgba(185, 28, 28, var(--text-opacity));
+  font-size: .75rem;
+  margin-top: 0.25rem;
+  padding:2px 5px
+}
+
+#bulletinwp-admin .bulletinwp-admin-common-layout .form-message.has-error{
+  --text-opacity: 1;
+  color: #b91c1c;
+  color: rgba(185, 28, 28, var(--text-opacity))
+}
+
+#bulletinwp-admin .bulletinwp-admin-common-layout .radio-wrapper{
+  position: relative;
+  display: inline-block;
+  padding-left: 2rem
+}
+
+#bulletinwp-admin .bulletinwp-admin-common-layout .radio-wrapper .thumb{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 9999px;
+  border-width: 1px;
+  --border-opacity: 1;
+  border-color: #324760;
+  border-color: rgba(50, 71, 96, var(--border-opacity));
+  padding:3px
+}
+
+#bulletinwp-admin .bulletinwp-admin-common-layout .radio-wrapper .thumb::before{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  --bg-opacity: 1;
+  background-color: #324760;
+  background-color: rgba(50, 71, 96, var(--bg-opacity));
+  opacity: 0;
+  -webkit-transition-duration: 300ms;
+       -o-transition-duration: 300ms;
+          transition-duration: 300ms;
+  content:''
+}
+
+#bulletinwp-admin .bulletinwp-admin-common-layout .radio-wrapper input{
+  display: none
+}
+
+#bulletinwp-admin .bulletinwp-admin-common-layout .radio-wrapper input:checked+.thumb::before{
+  opacity: 1
+}
+
+#bulletinwp-admin .bulletinwp-admin-common-layout .view-button{
+  font-size: 1.125rem;
+  height:61px
+}
+
+#bulletinwp-admin button:focus{
+  outline: 0
+}
+
+#bulletinwp-admin .btn{
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  font-family: Playfair Display, serif;
+  font-weight: 700;
+  border-top-width: 2px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+  border-left-width: 12px;
+  --border-opacity: 1;
+  border-color: #f77355;
+  border-color: rgba(247, 115, 85, var(--border-opacity));
+  --text-opacity: 1;
+  color: #324760;
+  color: rgba(50, 71, 96, var(--text-opacity));
+  padding-left: 2rem;
+  padding-right: 2rem;
+  cursor: pointer;
+  text-decoration: none;
+  width:260px;
+  height:56px
+}
+
+@media (min-width: 1024px){
+  #bulletinwp-admin .btn{
+    height: 5rem
+  }
+}
+
+#bulletinwp-admin .btn.btn-smaller{
+  width:246px;
+  height:56px
+}
+
+#bulletinwp-admin .btn:hover{
+  text-decoration: none
+}
+
+#bulletinwp-admin .btn-fill{
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  font-family: Playfair Display, serif;
+  font-weight: 700;
+  border-left-width: 12px;
+  --border-opacity: 1;
+  border-color: #d46349;
+  border-color: rgba(212, 99, 73, var(--border-opacity));
+  --bg-opacity: 1;
+  background-color: #f77355;
+  background-color: rgba(247, 115, 85, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  padding-left: 2rem;
+  padding-right: 2rem;
+  cursor: pointer;
+  text-decoration: none;
+  width:260px;
+  height:56px
+}
+
+@media (min-width: 1024px){
+  #bulletinwp-admin .btn-fill{
+    height: 5rem
+  }
+}
+
+#bulletinwp-admin .btn-fill.btn-smaller{
+  width:246px;
+  height:56px
+}
+
+#bulletinwp-admin .btn-fill:hover{
+  text-decoration: none;
+  --bg-opacity: 1;
+  background-color: #d46349;
+  background-color: rgba(212, 99, 73, var(--bg-opacity))
+}
+
+#bulletinwp-admin .btn-no-underline{
+  text-decoration: none
+}
+
+#bulletinwp-admin .btn-default{
+  --bg-opacity: 1;
+  background-color: #f4f4f4;
+  background-color: rgba(244, 244, 244, var(--bg-opacity));
+  cursor: pointer;
+  padding:1px 7px 2px;
+  border-width:1px;
+  border-color:#d8d8d8 #d1d1d1 #bababa
+}
+
+#bulletinwp-admin .btn-default.btn-smaller{
+  width:246px;
+  height:56px
+}
+
+#bulletinwp-admin .toggle-switch input[type="checkbox"]{
+  cursor: pointer;
+  border-style: none;
+  position: relative;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: transparent;
+  width:45px;
+  height:26px
+}
+
+#bulletinwp-admin .toggle-switch input[type="checkbox"]::before{
+  display: block;
+  position: absolute;
+  border-width: 1px;
+  --border-opacity: 1;
+  border-color: #324760;
+  border-color: rgba(50, 71, 96, var(--border-opacity));
+  -webkit-transition-duration: 300ms;
+       -o-transition-duration: 300ms;
+          transition-duration: 300ms;
+  content:'';
+  border-radius:20px;
+  width:45px;
+  height:26px;
+  margin:0
+}
+
+#bulletinwp-admin .toggle-switch input[type="checkbox"]::after{
+  display: block;
+  position: absolute;
+  --bg-opacity: 1;
+  background-color: #324760;
+  background-color: rgba(50, 71, 96, var(--bg-opacity));
+  -webkit-transition-duration: 300ms;
+       -o-transition-duration: 300ms;
+          transition-duration: 300ms;
+  border-radius: 9999px;
+  content:'';
+  width:18px;
+  height:18px;
+  top:50%;
+  left:5px;
+  -webkit-transform:translateY(-50%);
+      -ms-transform:translateY(-50%);
+          transform:translateY(-50%)
+}
+
+#bulletinwp-admin .toggle-switch input[type="checkbox"]:checked::before{
+  --bg-opacity: 1;
+  background-color: #324760;
+  background-color: rgba(50, 71, 96, var(--bg-opacity))
+}
+
+#bulletinwp-admin .toggle-switch input[type="checkbox"]:checked::after{
+  --bg-opacity: 1;
+  background-color: #f0f0f1;
+  background-color: rgba(240, 240, 241, var(--bg-opacity));
+  left:22px
+}
+
+#bulletinwp-admin .toggle-switch input[type="checkbox"]:focus{
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: 0
+}
+
+#bulletinwp-admin .wp-picker-container{
+  position: relative
+}
+
+#bulletinwp-admin .wp-picker-container .wp-picker-input-wrap input{
+  height:30px;
+  width:100px
+}
+
+#bulletinwp-admin .wp-picker-container .wp-picker-input-wrap .wp-picker-clear{
+  width: auto
+}
+
+#bulletinwp-admin .wp-picker-container .wp-picker-holder{
+  z-index: 10;
+  position: absolute;
+  pointer-events: auto
+}
+
+#bulletinwp-admin .bulletinwp-admin-common-layout .modal{
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: end;
+      justify-content: flex-end
+}
+
+#bulletinwp-admin .bulletinwp-admin-common-layout .modal .modal-overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  --bg-opacity: 1;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, var(--bg-opacity));
+  opacity: 0.25;
+  top: 0;
+  left: 0;
+  cursor: pointer
+}
+
+#bulletinwp-admin .bulletinwp-admin-common-layout .modal .tooltip-overlay{
+  position: fixed;
+  opacity: 0;
+  cursor: default
+}
+
+#bulletinwp-admin .bulletinwp-admin-common-layout .modal .bulletinwp-support-markdown{
+  position: absolute;
+  --bg-opacity: 1;
+  background-color: #f0f0f1;
+  background-color: rgba(240, 240, 241, var(--bg-opacity));
+  border-radius: 0.125rem;
+  -webkit-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+  width:100%;
+  top:30px
+}
+
+#bulletinwp-admin .bulletinwp-admin-common-layout .modal .bulletinwp-support-markdown .line-indicator{
+  height: 1.5rem;
+  border-width: 1px;
+  position: absolute;
+  top:-26px;
+  right:60px
+}
+
+@media (min-width: 1024px){
+  #bulletinwp-admin .bulletinwp-admin-common-layout .modal .bulletinwp-support-markdown{
+    width:400px
+  }
+}
+
+@media (min-width: 1280px){
+  #bulletinwp-admin .bulletinwp-admin-common-layout .modal .bulletinwp-support-markdown{
+    width:600px
+  }
+}
+
+#bulletinwp-admin .tooltip-wrapper{
+  position: relative
+}
+
+#bulletinwp-admin .tooltip-wrapper .tooltip{
+  display: none;
+  position: absolute;
+  bottom: 0;
+  padding-top: 1rem;
+  z-index: 10;
+  width:250px;
+  -webkit-transform:translateY(100%);
+      -ms-transform:translateY(100%);
+          transform:translateY(100%)
+}
+
+#bulletinwp-admin .tooltip-wrapper:hover .tooltip{
+  display: block
+}
+
+#bulletinwp-admin .right-content-panel-wrapper{
+  margin-top: 2rem
+}
+
+#bulletinwp-admin .right-content-panel-wrapper .btn-text{
+  --text-opacity: 1;
+  color: #324760;
+  color: rgba(50, 71, 96, var(--text-opacity));
+  text-decoration: none
+}
+
+#bulletinwp-admin .right-content-panel-wrapper .btn-text:hover{
+  --text-opacity: 1;
+  color: #f77355;
+  color: rgba(247, 115, 85, var(--text-opacity))
+}
+
+#bulletinwp-admin .right-content-panel-wrapper .btn-text:hover svg *{
+  fill:#f77355
+}
+
+#bulletinwp-admin .right-content-panel-wrapper .news-content{
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-width: 2px;
+  border-style: solid;
+  --border-opacity: 1;
+  border-color: #f77355;
+  border-color: rgba(247, 115, 85, var(--border-opacity))
+}
+
+#bulletinwp-admin .bulletin-type-wrapper{
+  max-width:310px
+}
+
+#bulletinwp-admin .bulletin-type-wrapper input{
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none
+}
+
+#bulletinwp-admin .bulletin-type-wrapper .type-name{
+  --text-opacity: 1;
+  color: #f77355;
+  color: rgba(247, 115, 85, var(--text-opacity));
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 1rem
+}
+
+#bulletinwp-admin .bulletin-type-wrapper .bulletin-type-image{
+  position: relative
+}
+
+#bulletinwp-admin .bulletin-type-wrapper .border{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-width: 2px;
+  --border-opacity: 1;
+  border-color: #324760;
+  border-color: rgba(50, 71, 96, var(--border-opacity))
+}
+
+#bulletinwp-admin .bulletin-type-wrapper .border:hover{
+  border-width: 4px
+}
+
+#bulletinwp-admin .bulletin-type-wrapper .checked-icon{
+  display: none
+}
+
+#bulletinwp-admin .bulletin-type-wrapper input:checked+label .type-name{
+  --text-opacity: 1;
+  color: #39d217;
+  color: rgba(57, 210, 23, var(--text-opacity))
+}
+
+#bulletinwp-admin .bulletin-type-wrapper input:checked+label .border{
+  border-width: 4px;
+  --border-opacity: 1;
+  border-color: #39d217;
+  border-color: rgba(57, 210, 23, var(--border-opacity))
+}
+
+#bulletinwp-admin .bulletin-type-wrapper input:checked+label .checked-icon{
+  display: block;
+  position: absolute;
+  top:3px;
+  right:3px
+}
+
+#bulletinwp-admin .tabs-wrapper{
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow: hidden
+}
+
+@media (min-width: 768px){
+  #bulletinwp-admin .tabs-wrapper{
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap
+  }
+}
+
+#bulletinwp-admin .tabs{
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width:300px
+}
+
+@media (min-width: 768px){
+  #bulletinwp-admin .tabs{
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap
+  }
+}
+
+#bulletinwp-admin .tabs .tab-item{
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+  border-left-width: 8px;
+  border-color: transparent;
+  padding: 0.5rem;
+  display:block !important
+}
+
+@media (min-width: 768px){
+  #bulletinwp-admin .tabs .tab-item{
+    padding: 1rem
+  }
+}
+
+#bulletinwp-admin .tabs .tab-item:hover{
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+  --bg-opacity: 0.5
+}
+
+#bulletinwp-admin .tabs .tab-item.active{
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+  --border-opacity: 1;
+  border-color: #f77355;
+  border-color: rgba(247, 115, 85, var(--border-opacity))
+}
+
+#bulletinwp-admin .tabs .tab-item.tab-error::after{
+  position: absolute;
+  --bg-opacity: 1;
+  background-color: #b91c1c;
+  background-color: rgba(185, 28, 28, var(--bg-opacity));
+  border-radius: 9999px;
+  --text-opacity: 1;
+  color: #f0f0f1;
+  color: rgba(240, 240, 241, var(--text-opacity));
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  font-weight: 700;
+  content:'!';
+  width:20px;
+  height:20px;
+  top:50%;
+  right:1rem;
+  -webkit-transform:translateY(-50%);
+      -ms-transform:translateY(-50%);
+          transform:translateY(-50%)
+}
+
+#bulletinwp-admin .tabs-content{
+  width: 100%;
+  -ms-flex-negative: 1;
+      flex-shrink: 1
+}
+
+#bulletinwp-admin .tabs-content .tab-pane{
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none
+}
+
+#bulletinwp-admin .tabs-content .tab-pane.active{
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+  opacity: 1;
+  pointer-events: auto;
+  width: auto;
+  height: 100%;
+  padding: 1rem
+}
+
+@media (min-width: 768px){
+  #bulletinwp-admin .tabs-content .tab-pane.active{
+    padding: 2rem
+  }
+}
+
+#bulletinwp-admin .heading-icon{
+  max-height:42px
+}
+
+@media (min-width: 1024px){
+  #bulletinwp-admin .bulletinwp-admin-welcome .container{
+    max-width:1024px
+  }
+}
+
+@media (min-width: 1280px){
+  #bulletinwp-admin .bulletinwp-admin-welcome .container{
+    max-width:1024px
+  }
+}
+
+#bulletinwp-admin .bulletinwp-admin-welcome .box-container{
+  position: relative;
+  border-width: 2px;
+  --border-opacity: 1;
+  border-color: #324760;
+  border-color: rgba(50, 71, 96, var(--border-opacity));
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  text-align: center
+}
+
+#bulletinwp-admin .bulletinwp-admin-welcome .logo-wrapper{
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  --bg-opacity: 1;
+  background-color: #f0f0f1;
+  background-color: rgba(240, 240, 241, var(--bg-opacity));
+  position: absolute;
+  top: 0;
+  left:50%;
+  -webkit-transform:translate(-50%, -50%);
+      -ms-transform:translate(-50%, -50%);
+          transform:translate(-50%, -50%)
+}
+
+#bulletinwp-admin .bulletinwp-admin-welcome .logo-wrapper img{
+  width:300px
+}
+
+#bulletinwp-admin .bulletinwp-admin-welcome .bullet-item{
+  position: relative;
+  padding-left: 2rem
+}
+
+#bulletinwp-admin .bulletinwp-admin-welcome .bullet-item::before{
+  width: 1rem;
+  height: 1rem;
+  --bg-opacity: 1;
+  background-color: #f77355;
+  background-color: rgba(247, 115, 85, var(--bg-opacity));
+  position: absolute;
+  left: 0;
+  content:'';
+  top:8px;
+  -webkit-transform:rotate(45deg);
+      -ms-transform:rotate(45deg);
+          transform:rotate(45deg)
+}
+
+#bulletinwp-admin .bulletinwp-admin-bulletins .wp-list-table{
+  position:unset
+}
+
+#bulletinwp-admin .bulletinwp-admin-common-layout{
+  margin-top: 1.5rem
+}
+
+#bulletinwp-admin .bulletinwp-admin-common-layout .content{
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: start;
+      align-items: flex-start
+}
+
+@media (min-width: 768px){
+  #bulletinwp-admin .bulletinwp-admin-common-layout .content{
+    -ms-flex-direction: row;
+        flex-direction: row
+  }
+}
+
+#bulletinwp-admin .bulletinwp-admin-common-layout .left-content{
+  width: 100%;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  padding-right: 0
+}
+
+@media (min-width: 768px){
+  #bulletinwp-admin .bulletinwp-admin-common-layout .left-content{
+    padding-right: 1.5rem
+  }
+}
+
+#bulletinwp-admin .bulletinwp-admin-common-layout .right-content{
+  width: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-top: 1.25rem
+}
+
+@media (min-width: 768px){
+  #bulletinwp-admin .bulletinwp-admin-common-layout .right-content{
+    margin-top: 0;
+    width:18rem
+  }
+}
+
+#bulletinwp-admin .bulletinwp-admin-common-layout .right-content .btn,#bulletinwp-admin .bulletinwp-admin-common-layout .right-content .btn-fill{
+  max-width: 100%;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem
+}
+
+#bulletinwp-admin .bulletinwp-admin-common-layout .box-container{
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity))
+}
+
+#bulletinwp-admin .bulletinwp-admin-common-layout .heading{
+  --text-opacity: 1;
+  color: #f77355;
+  color: rgba(247, 115, 85, var(--text-opacity));
+  font-weight: 700
+}
+
+@media (min-width: 768px){
+  #bulletinwp-admin .bulletinwp-admin-common-layout .heading{
+    font-size: 1.125rem
+  }
+}
+
+#bulletinwp-admin .bulletinwp-admin-common-layout .tab-heading{
+  font-family: Playfair Display, serif;
+  font-weight: 700;
+  font-size: 1.25rem
+}
+
+@media (min-width: 768px){
+  #bulletinwp-admin .bulletinwp-admin-common-layout .tab-heading{
+    font-size: 1.875rem
+  }
+}
+
+#bulletinwp-admin .bulletinwp-admin-common-layout .pro-pill{
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  --bg-opacity: 1;
+  background-color: #f77355;
+  background-color: rgba(247, 115, 85, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #f0f0f1;
+  color: rgba(240, 240, 241, var(--text-opacity));
+  font-size: .75rem;
+  font-weight: 700;
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  height:26px
+}
+
+#bulletinwp-admin .bulletinwp-admin-common-layout .pro-disabled{
+  opacity: 0.5;
+  pointer-events: none
+}
+
+#bulletinwp-admin .bulletinwp-admin-settings .select2-container--default .select2-selection{
+  height:40px;
+  padding:2px 0
+}
+
+#bulletinwp-admin .bulletinwp-admin-settings .select2-container--default .select2-selection--multiple .select2-selection__rendered .locked-tag .select2-selection__choice__remove{
+  display: none
+}
+
+#bulletinwp-admin .bulletinwp-admin-common-layout .box-heading{
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  --bg-opacity: 1;
+  background-color: #f0f0f1;
+  background-color: rgba(240, 240, 241, var(--bg-opacity));
+  position: absolute;
+  top: 0;
+  left:50%;
+  -webkit-transform:translate(-50%, -50%);
+      -ms-transform:translate(-50%, -50%);
+          transform:translate(-50%, -50%)
+}
+
+#bulletinwp-admin .bulletinwp-admin-common-layout .bullet-item{
+  position: relative;
+  padding-left: 2rem
+}
+
+#bulletinwp-admin .bulletinwp-admin-common-layout .bullet-item::before{
+  width: 1rem;
+  height: 1rem;
+  --bg-opacity: 1;
+  background-color: #f77355;
+  background-color: rgba(247, 115, 85, var(--bg-opacity));
+  position: absolute;
+  left: 0;
+  content:'';
+  top:8px;
+  -webkit-transform:rotate(45deg);
+      -ms-transform:rotate(45deg);
+          transform:rotate(45deg)
+}
+
+@media (min-width: 768px) {
+  .md\:block {
+    display: block;
+  }
+
+  .md\:flex-row {
+    -ms-flex-direction: row;
+        flex-direction: row;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
+  }
+
+  .md\:text-2xxl {
+    font-size: 3.25rem;
+  }
+
+  .md\:mb-0 {
+    margin-bottom: 0;
+  }
+
+  .md\:mr-4 {
+    margin-right: 1rem;
+  }
+
+  .md\:mb-12 {
+    margin-bottom: 3rem;
+  }
+
+  .md\:p-8 {
+    padding: 2rem;
+  }
+
+  .md\:p-12 {
+    padding: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:mb-0 {
+    margin-bottom: 0;
+  }
+
+  .lg\:w-auto {
+    width: auto;
+  }
+
+  .lg\:w-1\/2 {
+    width: 50%;
+  }
+}
+

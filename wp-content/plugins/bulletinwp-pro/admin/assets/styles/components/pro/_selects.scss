@@ -1,0 +1,36 @@
+.form-field-select {
+  .select2-container {
+    width: 225px !important;
+
+    .select2-selection {
+      &:focus {
+        @apply outline-none;
+      }
+    }
+
+    .select2-selection--single {
+      @apply border-blue-100 rounded-sm h-10 px-2;
+    }
+
+    .select2-selection__rendered {
+      @apply pl-0;
+
+      line-height: 40px;
+    }
+
+    .select2-selection__arrow {
+      height: 38px;
+      right: 7px;
+    }
+  }
+
+  .form-field-notice {
+    margin-top: 0.4rem;
+  }
+
+  &.icons-select-wrapper {
+    .select2-container {
+      width: 270px !important;
+    }
+  }
+}

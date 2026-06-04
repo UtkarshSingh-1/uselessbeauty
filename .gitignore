@@ -1,0 +1,37 @@
+# WordPress Core configuration (contains DB credentials & mail secrets)
+wp-config.php
+
+# Server / Cache configs
+.htaccess
+.htaccess.bk
+.htaccess_original
+.private/
+
+# Large uploads and backups
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/upgrade-temp-backup/
+wp-content/webtoffee_export/
+wp-content/webtoffee_import/
+wp-content/webtoffee_iew_log/
+wp-content/yaymail-logs/
+wp-content/logs/
+
+# Caches
+wp-content/cache/
+wp-content/litespeed/
+
+# Logs and databases
+*.log
+error_log
+wp-content/backup-db/
+
+# Temp / Autologin scripts
+create_autologin_*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node packages (if any are introduced)
+node_modules/

@@ -1,0 +1,104 @@
+// Smooth rendering for all browsers
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+// Fix for dashicon
+.dashicons-before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    padding: 0 !important;
+  }
+
+  img {
+    padding: 0 !important;
+    border: none;
+    width: auto;
+    margin: 0 auto;
+  }
+}
+
+#wpwrap {
+  @apply bg-white-100;
+}
+
+##{$plugin_slug}-admin {
+  @apply text-sm text-blue-100 leading-normal;
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-blue-100 font-playfair font-bold leading-tight p-0;
+  }
+
+  h1,
+  h2 {
+    display: inline;
+    background-image: linear-gradient(#f77355, #f77355);
+    background-size: 100% 8px;
+    background-position: 0 85%;
+    background-repeat: no-repeat;
+  }
+
+  h1 {
+    @apply text-2xxl;
+  }
+
+  h2 {
+    @apply text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  h4 {
+    @apply text-xl;
+  }
+
+  a {
+    @apply text-orange-100 underline;
+
+    &:focus {
+      @apply outline-none;
+
+      box-shadow: none;
+    }
+    &:hover {
+      @apply no-underline;
+    }
+  }
+
+  img {
+    @apply border-none;
+  }
+
+  blockquote {
+    @apply font-playfair font-bold leading-tight text-3xl;
+
+    margin: 1em auto;
+  }
+
+  .wrap {
+    @apply mt-8;
+  }
+
+  .wp-heading-inline {
+    @apply text-xl;
+
+    background-image: none;
+  }
+
+  .widefat {
+    td {
+      @apply font-normal;
+    }
+  }
+}

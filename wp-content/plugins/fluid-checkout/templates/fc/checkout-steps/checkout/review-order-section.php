@@ -1,0 +1,60 @@
+<?php
+/**
+ * Order review section
+ *
+ * This template can be overridden by copying it to yourtheme/woocommerce/checkout/review-order-section.php.
+ *
+ * HOWEVER, on occasion WooCommerce will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
+ *
+ * @see     https://docs.woocommerce.com/document/template-structure/
+ * @package fluid-checkout
+ * @version 4.2.0
+ * @wc-version 3.5.0
+ * @wc-original checkout/form-checkout.php
+ */
+
+defined( 'ABSPATH' ) || exit;
+
+// Prepare attribute strings
+$attributes_str = implode( ' ', array_map( array( FluidCheckout::instance(), 'map_html_attributes' ), array_keys( $attributes ), $attributes ) );
+$attributes_inner_str = implode( ' ', array_map( array( FluidCheckout::instance(), 'map_html_attributes' ), array_keys( $attributes_inner ), $attributes_inner ) );
+?>
+
+<?php do_action( 'fc_checkout_before_order_review' ); ?>
+
+<div <?php echo $attributes_str; // WPCS: XSS ok. ?>>
+
+	<div <?php echo $attributes_inner_str; // WPCS: XSS ok. ?>>
+
+		<?php do_action( 'fc_checkout_before_order_review_inside' ); ?>
+
+		<?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
+
+		<div class="fc-checkout-order-review__head">
+
+			<?php do_action( 'fc_checkout_after_order_review_title_before' ); ?>
+
+			<h3 class="fc-checkout-order-review-title fc-step__substep-title"><?php echo esc_html( $order_review_title ); ?></h3>
+
+			<?php do_action( 'fc_checkout_after_order_review_title_after' ); ?>
+
+		</div>
+
+		<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
+
+		<?php do_action( 'fc_checkout_order_review_content' ); ?>
+
+		<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
+
+		<?php do_action( 'fc_checkout_order_review_actions' ); ?>
+
+		<?php do_action( 'fc_checkout_after_order_review_inside' ); ?>
+
+	</div>
+</div>
+
+<?php do_action( 'fc_checkout_after_order_review' ); ?>

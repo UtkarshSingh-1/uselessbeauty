@@ -1,0 +1,33 @@
+# OS storage files
+.DS_Store
+__MACOSX
+
+# Cache
+.sass-cache
+
+# Don't commit package-lock.json to avoid errors between different OS
+package-lock.json
+
+# local environment files
+.vscode
+gulp-settings.local.json
+env.local.config.sh
+
+# Translation backup files
+**/*.po~
+**/*.mo~
+**/*.pot~
+
+# Project dependencies
+node_modules
+node_modules/**
+bower_components
+bower_compoents/**
+/vendor/**/.git
+
+# Git files
+.git
+.git/**
+
+# Zip files
+**/*.zip

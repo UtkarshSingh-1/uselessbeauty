@@ -1,0 +1,36 @@
+{
+	"version": 3,
+	"settings": {
+		"appearanceTools": false,
+		"layout": {
+			"contentSize": "1300px"
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "plain-thin",
+					"slug": "plain-thin",
+					"fontFace": [
+						{
+							"fontFamily": "plain-thin",
+							"fontStretch": "",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": "https://use-lessbeauty.com/wp-content/uploads/useanyfont/7651Plain-Thin.woff2"
+						}
+					],
+					"isUAF": true
+				}
+			]
+		}
+	},
+	"styles": {
+		"elements": {
+			"link": {
+				"typography": {
+					"textDecoration": false
+				}
+			}
+		}
+	}
+}

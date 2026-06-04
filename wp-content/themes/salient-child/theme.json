@@ -1,0 +1,22 @@
+{
+	"settings": {
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "proxima-nova-font",
+					"slug": "proxima-nova-font",
+					"fontFace": [
+						{
+							"fontFamily": "proxima-nova-font",
+							"fontStretch": "",
+							"fontStyle": "normal",
+							"fontWeight": "100",
+							"src": "https://use-lessbeauty.com/wp-content/uploads/useanyfont/5932Proxima-Nova-Font.woff2"
+						}
+					],
+					"isUAF": true
+				}
+			]
+		}
+	}
+}

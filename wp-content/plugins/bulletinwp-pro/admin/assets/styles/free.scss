@@ -1,0 +1,24 @@
+@import "main";
+
+##{$plugin_slug}-admin {
+  .#{$plugin_slug}-admin-common-layout {
+    .box-heading {
+      @apply px-10 bg-white-100 absolute top-0;
+
+      left: 50%;
+      transform: translate(-50% ,-50%);
+    }
+
+    .bullet-item {
+      @apply relative pl-8;
+
+      &::before {
+        @apply w-4 h-4 bg-orange-100 absolute left-0;
+
+        content: '';
+        top: 8px;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

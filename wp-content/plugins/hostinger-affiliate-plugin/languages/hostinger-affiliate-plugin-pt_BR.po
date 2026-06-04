@@ -1,0 +1,2647 @@
+# Copyright (C) 2023 Hostinger
+# This file is distributed under the GPL-2.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: Hostinger Affiliate Plugin 1.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/hostinger-"
+"affiliate-plugin\n"
+"Last-Translator: \n"
+"Language-Team: Portuguese (Brazil)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-11-28T09:55:18+00:00\n"
+"PO-Revision-Date: 2026-05-14 07:17+0000\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: hostinger-affiliate-plugin\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Loco-Version: 2.8.0; wp-6.8.2; php-8.2.29"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:892
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2582
+#, fuzzy
+msgid " Add new table"
+msgstr " Adicionar nova tabela"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:805
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2495
+#, fuzzy
+msgid " Add/Edit products to list"
+msgstr " Adicionar/Editar produtos à lista"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:850
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2540
+#, fuzzy
+msgid " Edit table"
+msgstr " Editar tabela"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:450
+#: amazon-gutenberg-block/dist/index.js:2140
+#, fuzzy
+msgid " Search for product(s) without ASIN"
+msgstr " Pesquisar produto(s) sem ASIN"
+
+#: mercado-gutenberg-block/dist/index.js:2
+#, fuzzy
+msgid " Search for product(s) without ID"
+msgstr " Pesquisar produto(s) sem ID"
+
+#. translators: %d: number of products (always 1 for this string).
+#: src/Localization/AdminTranslations.php:188
+#, fuzzy, php-format
+msgid "%d product selected"
+msgstr "%d produto selecionado"
+
+#. translators: %d: number of products (2 or more).
+#: src/Localization/AdminTranslations.php:190
+#, fuzzy, php-format
+#| msgid "No products selected"
+msgid "%d products selected"
+msgstr "Nenhum produto selecionado"
+
+#. translators: %s: Product ASIN
+#. translators: %s: Product ID
+#: src/Api/Amazon/ProxyApi/Api/ProductApi.php:72
+#: src/Api/Mercado/Api/ProductApi.php:82
+#, php-format
+msgid "%s Product does not exist anymore."
+msgstr "%s: O produto não existe mais."
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:830
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2520
+#, fuzzy
+msgid "-- Choose table data --"
+msgstr "-- Selecionar dados da tabela --"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:629
+#: amazon-gutenberg-block/src/edit.js:662
+#: amazon-gutenberg-block/src/edit.js:991
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2319
+#: amazon-gutenberg-block/dist/index.js:2352
+#: amazon-gutenberg-block/dist/index.js:2681
+#, fuzzy
+msgid "-- Select from list --"
+msgstr "-- Selecione na lista --"
+
+#: src/Localization/AdminTranslations.php:319
+msgid ""
+"<strong>Amazon is available in</strong>: Australia, Belgium, Brazil, Canada, "
+"Egypt, France, Germany, India, Italy, Japan, Mexico, Netherlands, Poland, "
+"Saudi Arabia, Singapore, Spain, Sweden, Turkey, United Arab Emirates, United "
+"Kingdom, United States."
+msgstr ""
+"A <strong>Amazon está disponível em</strong>: Austrália, Bélgica, Brasil, "
+"Canadá, Egito, França, Alemanha, Índia, Itália, Japão, México, Países Baixos,"
+" Polônia, Arábia Saudita, Cingapura, Espanha, Suécia, Turquia, Emirados "
+"Árabes Unidos, Reino Unido, Estados Unidos."
+
+#: src/Localization/AdminTranslations.php:320
+#| msgid ""
+#| "<strong>Mercado Livre is available in</strong>: Argentina, Brazil, Mexico."
+msgid "<strong>Mercado Livre is available in</strong>: Brazil, Mexico."
+msgstr ""
+"O <strong>Mercado Livre está disponível em</strong>: Argentina, Brasil, "
+"México."
+
+#: src/Localization/AdminTranslations.php:288
+msgid "A table can display up to 6 products."
+msgstr "Uma tabela pode exibir até 6 produtos."
+
+#: src/Localization/AdminTranslations.php:59
+msgid "Access key"
+msgstr "Chave de acesso"
+
+#: src/Localization/AdminTranslations.php:76
+msgid "Access key cannot contain special characters"
+msgstr "A chave de acesso não pode conter caracteres especiais"
+
+#: src/Localization/AdminTranslations.php:77
+msgid "Access key must be 20 characters long"
+msgstr "A chave de acesso deve ter 20 caracteres"
+
+#: src/Localization/AdminTranslations.php:67
+msgid "Access key must be combination of letters and numbers"
+msgstr "A chave de acesso deve ser uma combinação de letras e números"
+
+#: src/Localization/AdminTranslations.php:235
+msgid "Add"
+msgstr "Adicionar"
+
+#: src/Localization/AdminTranslations.php:168
+#| msgid "Add “Link Amazon product(s)” in block editor"
+msgid "Add \"Link Amazon product(s)\" in block editor"
+msgstr "Adicionar \"Vincular produto(s) da Amazon\" no editor de blocos"
+
+#: src/Localization/AdminTranslations.php:110
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:325
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2015
+msgid "Add a few products and describe them briefly."
+msgstr "Adicione alguns produtos e faça uma breve descrição deles."
+
+#: src/Localization/AdminTranslations.php:98
+msgid "Add a new post"
+msgstr "Adicionar um novo post"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/components/products_selected.js:406
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:1262
+#, fuzzy
+msgid "Add a new product"
+msgstr "Adicionar um novo produto"
+
+#: src/Localization/AdminTranslations.php:269
+#: amazon-gutenberg-block/dist/index.js:4
+#: amazon-gutenberg-block/src/views/TableConfiguration.jsx:91
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2873
+msgid "Add a new table configuration"
+msgstr "Adicionar uma nova configuração de tabela"
+
+#: src/Localization/AdminTranslations.php:29
+#: src/Localization/AdminTranslations.php:39
+msgid "Add a product block"
+msgstr "Adicionar um bloco de produto"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:315
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2005
+#, fuzzy
+msgid "Add a single product with detailed description."
+msgstr "Adicione um único produto com uma descrição detalhada."
+
+#: src/Localization/AdminTranslations.php:260
+msgid "Add at least 2 products to continue."
+msgstr "Adicione pelo menos 2 produtos para continuar."
+
+#: src/Localization/AdminTranslations.php:265
+msgid "Add at least one product data row."
+msgstr "Adicione pelo menos uma linha de dados no produto."
+
+#: src/Localization/AdminTranslations.php:262
+msgid "Add at least two products to continue"
+msgstr "Adicione pelo menos dois produtos para continuar"
+
+#: amazon-gutenberg-block/dist/index.js:1
+#: amazon-gutenberg-block/src/components/product_list_bestsellers.js:16
+#: amazon-gutenberg-block/dist/index.js:185
+#, fuzzy
+msgid "Add best-sellers"
+msgstr "Adicionar best-sellers"
+
+#: src/Localization/AdminTranslations.php:249
+msgid "Add highlight"
+msgstr "Adicionar destaque"
+
+#: src/Localization/AdminTranslations.php:114
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:335
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2025
+msgid "Add multiple similar products and compare them."
+msgstr "Adicione produtos parecidos para compará-los."
+
+#: src/Localization/AdminTranslations.php:236
+#: amazon-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/src/components/product_selector.js:172
+#: amazon-gutenberg-block/dist/index.js:530
+msgid "Add product"
+msgstr "Adicionar produto"
+
+#: src/Localization/AdminTranslations.php:31
+#: src/Localization/AdminTranslations.php:41
+#: src/Localization/AdminTranslations.php:145
+#: src/Localization/AdminTranslations.php:200
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/components/product_selector_multiple.js:288
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:837
+msgid "Add products"
+msgstr "Adicionar produtos"
+
+#: src/Localization/AdminTranslations.php:248
+msgid "Add row"
+msgstr "Adicionar linha"
+
+#: src/Localization/AdminTranslations.php:208
+msgid "Add table"
+msgstr "Adicionar tabela"
+
+#: src/Localization/AdminTranslations.php:206
+#| msgid "Add the row data"
+msgid "Add the product data"
+msgstr "Adicionar os dados do produto"
+
+#: src/Localization/AdminTranslations.php:172
+msgid "Add the product(s)"
+msgstr "Adicione o(s) produto(s)"
+
+#: src/Localization/AdminTranslations.php:25
+msgid ""
+"Add your API credentials to select a language and improve search results. "
+"This step is optional, but recommended."
+msgstr ""
+"Adicione suas credenciais de API para escolher um idioma e aprimorar os "
+"resultados de pesquisa. Esta etapa é opcional, mas recomendada."
+
+#: src/Localization/AdminTranslations.php:203
+msgid "Affiliate link"
+msgstr "Link de afiliado"
+
+#: src/Admin/Menus.php:54 src/Admin/Menus.php:55 src/Admin/Menus.php:73
+#: src/Localization/AdminTranslations.php:14
+msgid "Affiliate Marketing"
+msgstr "Marketing de afiliados"
+
+#: src/Setup/Cpts.php:41
+msgid "Affiliate tables"
+msgstr "Tabelas de afiliados"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/components/products_selected.js:285
+#: amazon-gutenberg-block/src/components/products_selected.js:289
+#: amazon-gutenberg-block/src/components/products_selected.js:306
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:1141
+#: amazon-gutenberg-block/dist/index.js:1145
+#: amazon-gutenberg-block/dist/index.js:1162
+#, fuzzy
+msgid "Affiliate URL"
+msgstr "URL do afiliado"
+
+#: src/Localization/AdminTranslations.php:173
+msgid ""
+"After choosing the layout, you need to find the product(s) that you want to "
+"promote in your post. You can copy-paste the ASIN or search the product(s) "
+"manually."
+msgstr ""
+"Após escolher o layout, é necessário encontrar o(s) produto(s) que você quer "
+"promover no seu post. Copie e cole o código ASIN ou pesquise os produtos "
+"manualmente."
+
+#: src/Localization/AdminTranslations.php:71
+msgid "Amazon"
+msgstr "Amazon"
+
+#: src/Localization/AdminTranslations.php:142
+msgid "Amazon Affiliate"
+msgstr "Afiliado da Amazon"
+
+#: src/Localization/Messages.php:16
+msgid "Amazon API returned an error."
+msgstr "A API Amazon retornou um erro."
+
+#: src/Localization/AdminTranslations.php:195
+msgid "Amazon api was disconnected!"
+msgstr "A API Amazon foi desconectada!"
+
+#: src/Localization/AdminTranslations.php:73
+msgid "Amazon Associates"
+msgstr "Associados Amazon"
+
+#: src/Repositories/TableRepository.php:300
+msgid "Amazon Button"
+msgstr "Botão Amazon"
+
+#: src/Localization/AdminTranslations.php:12
+#, fuzzy
+msgid ""
+"Amazon Product Advertising API (PA-API) support has been removed. Your "
+"affiliate links continue to work. No action needed."
+msgstr ""
+"O suporte à API de publicidade de produtos da Amazon (PA-API) foi removido. "
+"Seus links de afiliados continuam funcionando. Nenhuma ação é necessária."
+
+#: src/Localization/AdminTranslations.php:116
+#, fuzzy
+msgid "Amazon Settings"
+msgstr "Configurações da Amazon"
+
+#: src/Localization/AdminTranslations.php:197
+msgid "Amazon settings were successfully saved!"
+msgstr "As configurações da Amazon foram salvas com sucesso!"
+
+#: src/Localization/AdminTranslations.php:229
+msgid "An unexpected error occurred"
+msgstr "Ocorreu um erro inesperado"
+
+#: src/Localization/AdminTranslations.php:58
+msgid "API Settings"
+msgstr "Configurações da API"
+
+#: src/Localization/AdminTranslations.php:83
+msgid "API status"
+msgstr "Status da API"
+
+#: src/Localization/AdminTranslations.php:295
+msgid "Argentina"
+msgstr "Argentina"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/components/products_selected.js:217
+#: amazon-gutenberg-block/src/edit.js:553
+#: amazon-gutenberg-block/src/edit.js:790
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:1073
+#: amazon-gutenberg-block/dist/index.js:2243
+#: amazon-gutenberg-block/dist/index.js:2480
+#, fuzzy
+msgid "ASIN"
+msgstr "ASIN"
+
+#: src/Localization/AdminTranslations.php:281
+msgid ""
+"ASIN is a unique 10-digit code Amazon assigns to products in its catalog. "
+"You can find it on the product detail page."
+msgstr ""
+"O ASIN é um código único de 10 dígitos que a Amazon atribui aos produtos em "
+"seu catálogo. Você pode encontrá-lo na página de detalhes do produto."
+
+#: src/Localization/Messages.php:20 amazon-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/components/products_selected.js:105
+#: amazon-gutenberg-block/src/components/product_selector.js:65
+#: amazon-gutenberg-block/src/components/product_selector_multiple.js:75
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:423
+#: amazon-gutenberg-block/dist/index.js:624
+#: amazon-gutenberg-block/dist/index.js:961
+msgid "ASIN validation failed. Please check entered product ASIN!"
+msgstr ""
+"Falha na validação da ASIN. Verifique o códgo ASIN do produto inserido!"
+
+#. translators: %s: PHP version
+#: hostinger-affiliate-plugin.php:106
+msgid "Attention:"
+msgstr "Atenção:"
+
+#: src/Localization/AdminTranslations.php:292
+msgid "Australia"
+msgstr "Austrália"
+
+#: amazon-gutenberg-block/dist/index.js:1
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/components/product_list_type_selector.js:38
+#: amazon-gutenberg-block/src/edit.js:633
+#: amazon-gutenberg-block/dist/index.js:325
+#: amazon-gutenberg-block/dist/index.js:2323
+#, fuzzy
+msgid "Automatically based on best-sellers"
+msgstr "Automaticamente baseado em best-sellers"
+
+#: amazon-gutenberg-block/dist/index.js:1
+#: amazon-gutenberg-block/src/components/product_list_bestsellers.js:80
+#: amazon-gutenberg-block/dist/index.js:249
+#, fuzzy
+msgid "Automatically generate product list"
+msgstr "Gerar automaticamente a lista de produtos"
+
+#: src/Localization/AdminTranslations.php:153
+msgid "Back"
+msgstr "Voltar"
+
+#: src/Localization/AdminTranslations.php:293
+msgid "Belgium"
+msgstr "Bélgica"
+
+#. translators: %d: bestseller place
+#: src/Shortcodes/templates/lists/horizontal-cards.php:20
+#: src/Shortcodes/templates/lists/list-with-description.php:16
+#: src/Shortcodes/templates/lists/simplified-list.php:37
+#, php-format
+msgid "Bestseller #%d"
+msgstr "Mais vendido #%d"
+
+#: src/Localization/AdminTranslations.php:294
+msgid "Brazil"
+msgstr "Brasil"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:947
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2637
+#, fuzzy
+msgid "Buy button"
+msgstr "Botão Comprar"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:389
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2079
+#, fuzzy
+msgid "Buy button overwrite enabled?"
+msgstr "A substituição do botão Comprar está ativada?"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:401
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2091
+#, fuzzy
+msgid "Buy button text"
+msgstr "Texto do botão Comprar"
+
+#: src/Models/Product.php:275
+msgid "Buy now"
+msgstr "Compre agora"
+
+#: src/Models/Product.php:279
+msgid "Buy on Amazon"
+msgstr "Comprar na Amazon"
+
+#: src/Localization/AdminTranslations.php:296
+msgid "Canada"
+msgstr "Canadá"
+
+#: src/Localization/AdminTranslations.php:212 src/Setup/Blocks.php:248
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/components/selected_display_type.js:32
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:1303
+#, fuzzy
+msgid "Change main layout"
+msgstr "Alterar o layout principal"
+
+#: src/Localization/AdminTranslations.php:152
+msgid ""
+"Check out our quick guide for tips on how to start using this plugin and "
+"start earning."
+msgstr ""
+"Dê uma olhada no nosso guia prático para dicas de como começar a utilizar "
+"este plugin e começar a lucrar."
+
+#: src/Setup/Blocks.php:203
+msgid "Check your search term and try again"
+msgstr "Verifique o termo pesquisado e tente novamente"
+
+#: src/Localization/AdminTranslations.php:65
+msgid "Choose Amazon region ..."
+msgstr "Escolher região da Amazon…"
+
+#: src/Localization/AdminTranslations.php:106
+msgid ""
+"Choose any template for your needs  – all of them are integrated with the "
+"Gutenberg editor."
+msgstr ""
+"Escolha o template que você quiser. Todos eles são integrados ao editor "
+"Gutenberg."
+
+#: src/Localization/AdminTranslations.php:35
+#: src/Localization/AdminTranslations.php:46
+msgid ""
+"Choose between a single product card, multiple product list, or comparison "
+"table."
+msgstr ""
+"Escolha entre um único cartão de produto, uma lista de vários produtos ou "
+"uma tabela de comparação."
+
+#: amazon-gutenberg-block/dist/index.js:4
+#: amazon-gutenberg-block/src/edit.js:1069
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2759
+#, fuzzy
+msgid "Choose how the product block will look like in your post"
+msgstr "Escolha como o bloco do produto será exibido em sua postagem"
+
+#: src/Localization/AdminTranslations.php:30
+#: src/Localization/AdminTranslations.php:40
+msgid "Choose how to display products"
+msgstr "Escolha como exibir os produtos"
+
+#: src/Localization/AdminTranslations.php:170
+msgid "Choose the layout for the product(s) block"
+msgstr "Escolha o layout do bloco de produto(s)"
+
+#: amazon-gutenberg-block/dist/index.js:1
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/components/product_list_bestsellers.js:24
+#: amazon-gutenberg-block/src/components/product_selector_multiple.js:248
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:193
+#: amazon-gutenberg-block/dist/index.js:797
+#, fuzzy
+msgid "Choose the layout of your product list"
+msgstr "Escolha o layout de sua lista de produtos"
+
+#: src/Localization/AdminTranslations.php:272
+#: amazon-gutenberg-block/dist/index.js:4
+#: amazon-gutenberg-block/src/views/TableConfiguration.jsx:54
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2836
+msgid "Choose the table configuration"
+msgstr "Escolha a configuração da tabela"
+
+#: src/Localization/AdminTranslations.php:137
+#| msgid "Choose which products to compare and set up your table’s rows."
+msgid "Choose which products to compare and set up your table's rows."
+msgstr ""
+"Selecione os produtos que deseja comparar e defina as linhas da tabela."
+
+#: src/Localization/AdminTranslations.php:211
+msgid "Close"
+msgstr "Fechar"
+
+#: src/Localization/AdminTranslations.php:133
+#: amazon-gutenberg-block/dist/index.js:1
+#: amazon-gutenberg-block/src/components/DisplayTypeSelector.jsx:41
+#: mercado-gutenberg-block/dist/index.js:1
+#: amazon-gutenberg-block/dist/index.js:41
+msgid "Coming soon"
+msgstr "Em breve"
+
+#: src/Localization/AdminTranslations.php:113
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:334
+#: amazon-gutenberg-block/src/edit.js:1011
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2024
+#: amazon-gutenberg-block/dist/index.js:2701
+msgid "Comparison Table"
+msgstr "Tabela de comparação"
+
+#: src/Localization/AdminTranslations.php:125
+msgid "Comparison tables"
+msgstr "Tabelas de comparação"
+
+#: src/Localization/AdminTranslations.php:139
+msgid "Configure"
+msgstr "Configurar"
+
+#: src/Setup/Blocks.php:258
+msgid "Confirm selection"
+msgstr "Confirmar seleção"
+
+#: src/Localization/AdminTranslations.php:82
+msgid "Connect"
+msgstr "Conectar"
+
+#: src/Localization/AdminTranslations.php:80
+msgid "Connect Amazon account"
+msgstr "Conectar conta da Amazon"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:527
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2217
+#, fuzzy
+msgid "Connect Now"
+msgstr "Conecte-se agora"
+
+#: src/Localization/AdminTranslations.php:104
+msgid "Connect With Your Amazon Account"
+msgstr "Conectar usando sua conta da Amazon"
+
+#: src/Localization/AdminTranslations.php:19
+#: src/Localization/AdminTranslations.php:96
+msgid "Connect Your Amazon Account"
+msgstr "Conectar sua conta da Amazon"
+
+#: src/Localization/AdminTranslations.php:93
+msgid "Connect your Amazon Associates Account"
+msgstr "Conecte sua conta de Associados Amazon"
+
+#: src/Localization/AdminTranslations.php:16
+#| msgid "Connect  your Amazon Associates Account"
+msgid "Connect your Amazon Associates account"
+msgstr "Conecte sua conta de Associados Amazon"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:506
+#: amazon-gutenberg-block/dist/index.js:2196
+#, fuzzy
+msgid "Connect Your Amazon Partnership Account"
+msgstr "Conecte sua conta de parceria da Amazon"
+
+#: src/Localization/AdminTranslations.php:52
+#: src/Localization/AdminTranslations.php:85
+msgid "Connected"
+msgstr "Conectado"
+
+#: src/Localization/AdminTranslations.php:87
+msgid "Connected to Partner ID:"
+msgstr "Conectado ao ID do parceiro:"
+
+#: src/Localization/AdminTranslations.php:210
+#: amazon-gutenberg-block/dist/index.js:1
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/dist/index.js:4
+#: amazon-gutenberg-block/src/components/product_list_bestsellers.js:53
+#: amazon-gutenberg-block/src/components/product_selector_multiple.js:219
+#: amazon-gutenberg-block/src/views/TableConfiguration.jsx:64
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:222
+#: amazon-gutenberg-block/dist/index.js:768
+#: amazon-gutenberg-block/dist/index.js:2846
+msgid "Continue"
+msgstr "Continuar"
+
+#: src/Localization/AdminTranslations.php:138
+msgid "Copied successfully!"
+msgstr "Copiado com sucesso!"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/components/products_selected.js:162
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:1018
+#, fuzzy
+msgid "Copied to clipboard!"
+msgstr "Copiado para a área de transferência!"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/components/products_selected.js:266
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:1122
+#, fuzzy
+msgid "Copy to clipboard"
+msgstr "Copiar para a área de transferência"
+
+#. translators: %s: ASIN helper page URL
+#: amazon-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/components/product_selector.js:148
+#: amazon-gutenberg-block/src/components/product_selector_multiple.js:193
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:506
+#: amazon-gutenberg-block/dist/index.js:742
+#, fuzzy, js-format
+msgid ""
+"Copy-paste Amazon product ASIN. <a href=\"%s\" target=\"_blank\">Where to "
+"find it?</a>"
+msgstr ""
+"Copiar e colar o ASIN do produto da Amazon. <a href=\"%s\" target=\"_blank\">"
+"Onde encontrá-lo?</a>"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:378
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2068
+#, fuzzy
+msgid "Count of items to show in list."
+msgstr "Contagem de itens a serem exibidos na lista."
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:279
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:1969
+#, fuzzy
+msgid "Count of list items in product description."
+msgstr "Contagem de itens da lista na descrição do produto."
+
+#: src/Localization/AdminTranslations.php:63
+msgid "Country"
+msgstr "País"
+
+#: src/Localization/AdminTranslations.php:88
+#: src/Localization/AdminTranslations.php:166
+#: src/Localization/AdminTranslations.php:178
+msgid "Create a new post"
+msgstr "Criar novo post"
+
+#: src/Localization/AdminTranslations.php:28
+#: src/Localization/AdminTranslations.php:38
+#: src/Localization/AdminTranslations.php:316
+msgid "Create a post"
+msgstr "Criar um post"
+
+#: src/Localization/AdminTranslations.php:314
+msgid "Create a post to start promoting products"
+msgstr "Crie um post para começar a promover produtos"
+
+#: src/Localization/AdminTranslations.php:124
+#: src/Localization/AdminTranslations.php:126
+msgid "Create and manage your comparison tables."
+msgstr "Crie e gerencie suas tabelas de comparação."
+
+#. Description of the plugin
+#: hostinger-affiliate-plugin.php
+msgid ""
+"Create and promote products using affiliate links from different "
+"marketplaces. Easily manage and display affiliate products on your site."
+msgstr ""
+"Crie e divulgue produtos usando links de afiliados de diversos marketplaces. "
+"Gerencie e exiba facilmente os produtos de afiliados em seu site."
+
+#: src/Localization/AdminTranslations.php:54
+msgid "Create post"
+msgstr "Criar post"
+
+#: src/Localization/AdminTranslations.php:181
+#| msgid "Create new table"
+msgid "Create table"
+msgstr "Criar nova tabela"
+
+#: src/Localization/AdminTranslations.php:135
+msgid "Create your first comparison table"
+msgstr "Crie sua primeira tabela de comparação"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:577
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2267
+#, fuzzy
+msgid "Custom product title."
+msgstr "Título personalizado do produto."
+
+#: src/Localization/AdminTranslations.php:50
+#, fuzzy
+msgid "Customize the product block"
+msgstr "Personalizar o bloco de produtos"
+
+#: src/Localization/AdminTranslations.php:244
+msgid "Date created"
+msgstr "Data de criação"
+
+#: src/Localization/AdminTranslations.php:213
+msgid "Delete"
+msgstr "Excluir"
+
+#: src/Localization/AdminTranslations.php:219
+msgid "Delete product?"
+msgstr "Excluir produto?"
+
+#: src/Localization/AdminTranslations.php:214
+#| msgid "Delete table?"
+msgid "Delete table"
+msgstr "Excluir tabela"
+
+#: src/Localization/AdminTranslations.php:218
+msgid "Delete this table?"
+msgstr "Excluir essa tabela?"
+
+#: src/Localization/AdminTranslations.php:318
+msgid ""
+"Depending on your country, different marketplaces may be available to you."
+msgstr ""
+"Dependendo do seu país, diferentes marketplaces podem estar disponíveis para "
+"você."
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:257
+#: amazon-gutenberg-block/src/edit.js:934
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:1947
+#: amazon-gutenberg-block/dist/index.js:2624
+#, fuzzy
+msgid "Description"
+msgstr "Descrição"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:233
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:1923
+#, fuzzy
+msgid "Description enabled?"
+msgstr "Descrição ativada?"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:270
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:1960
+#, fuzzy
+msgid "Description Items"
+msgstr "Descrição dos itens"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:289
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:1979
+#, fuzzy
+msgid "Description length"
+msgstr "Descrição do comprimento"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:244
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:1934
+#, fuzzy
+msgid "Description overwrite enabled?"
+msgstr "A substituição da descrição está ativada?"
+
+#: src/Localization/AdminTranslations.php:241
+msgid "Determine who will see the table"
+msgstr "Determine quem poderá ver a tabela"
+
+#: src/Localization/AdminTranslations.php:89
+msgid "Disconnect"
+msgstr "Desconectar"
+
+#: src/Localization/AdminTranslations.php:86
+msgid "Disconnected"
+msgstr "Desconectado"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:729
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2419
+#, fuzzy
+msgid "Display Bestseller #"
+msgstr "Exibir best-seller #"
+
+#: amazon-gutenberg-block/dist/index.js:1
+#: amazon-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/components/product_list_bestsellers.js:99
+#: amazon-gutenberg-block/src/components/product_selector.js:164
+#: amazon-gutenberg-block/src/components/product_selector_multiple.js:159
+#: amazon-gutenberg-block/src/components/product_selector_multiple.js:211
+#: amazon-gutenberg-block/src/components/product_selector_multiple.js:274
+#: mercado-gutenberg-block/dist/index.js:1
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:268
+#: amazon-gutenberg-block/dist/index.js:522
+#: amazon-gutenberg-block/dist/index.js:708
+#: amazon-gutenberg-block/dist/index.js:760
+#: amazon-gutenberg-block/dist/index.js:823
+#, fuzzy
+msgid ""
+"Don’t worry. You can edit the layout and product in the Block configuration "
+"in the right sidebar anytime."
+msgstr ""
+"Não se preocupe. Você pode editar o layout e o produto na configuração do "
+"bloco na barra lateral direita a qualquer momento."
+
+#. translators: %s: product asin.
+#: src/Localization/AdminTranslations.php:276
+#, php-format
+msgid "Duplicate ASIN: %s was not added."
+msgstr "ASIN duplicado: %s não foi adicionado."
+
+#: src/Localization/AdminTranslations.php:102
+msgid "Earn Commissions"
+msgstr "Ganhe Comissões"
+
+#: src/Localization/AdminTranslations.php:143
+msgid "Edit your Amazon API details"
+msgstr "Edite os detalhes da API Amazon"
+
+#: src/Localization/AdminTranslations.php:297
+msgid "Egypt"
+msgstr "Egito"
+
+#: src/Api/Mercado/Client.php:116
+#, fuzzy
+msgid "Empty response from proxy API."
+msgstr "Resposta vazia da API do proxy."
+
+#: src/Localization/AdminTranslations.php:263
+msgid "Enable at least two products to continue"
+msgstr "Permitir que pelo menos dois produtos continuem"
+
+#: mercado-gutenberg-block/dist/index.js:2
+#, fuzzy
+msgid "Enable Mercado Livre store in settings"
+msgstr "Ativar a loja do Mercado Livre nas configurações"
+
+#: mercado-gutenberg-block/dist/index.js:2
+#, fuzzy
+msgid "Enter affiliate url"
+msgstr "Insira a url do afiliado"
+
+#: amazon-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/components/products_selected.js:359
+#: amazon-gutenberg-block/src/components/products_selected.js:367
+#: amazon-gutenberg-block/src/components/product_selector.js:156
+#: amazon-gutenberg-block/src/components/product_selector_multiple.js:202
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:514
+#: amazon-gutenberg-block/dist/index.js:751
+#: amazon-gutenberg-block/dist/index.js:1215
+#: amazon-gutenberg-block/dist/index.js:1223
+#, fuzzy
+msgid "Enter ASIN here"
+msgstr "Digite ASIN aqui"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:556
+#: amazon-gutenberg-block/dist/index.js:2246
+#, fuzzy
+msgid "Enter ASIN here..."
+msgstr "Digite ASIN aqui..."
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/components/products_selected.js:358
+#: amazon-gutenberg-block/src/components/products_selected.js:366
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:1214
+#: amazon-gutenberg-block/dist/index.js:1222
+#, fuzzy
+msgid "Enter product ID here"
+msgstr "Insira a ID do produto aqui"
+
+#: mercado-gutenberg-block/dist/index.js:2
+#, fuzzy
+msgid "Enter product ID here..."
+msgstr "Digite a ID do produto aqui..."
+
+#: amazon-gutenberg-block/dist/index.js:1
+#: amazon-gutenberg-block/src/components/product_list_bestsellers.js:92
+#: amazon-gutenberg-block/dist/index.js:261
+#, fuzzy
+msgid "Enter product keywords here, example: corsair rgb keyboard"
+msgstr ""
+"Digite as palavras-chave do produto aqui, por exemplo: corsair rgb keyboard"
+
+#: src/Localization/AdminTranslations.php:254
+msgid "Enter text label. For example: Best Price"
+msgstr "Digite a identificação do texto. Por exemplo: Melhor Preço"
+
+#: src/Localization/AdminTranslations.php:209
+msgid "Enter your table name"
+msgstr "Digite o nome de sua tabela"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/components/products_selected.js:165
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:1021
+#, fuzzy
+msgid "Failed to copy!"
+msgstr "Falha na cópia!"
+
+#: src/Api/Mercado/Client.php:125
+#, fuzzy
+msgid "Failed to decode proxy API response."
+msgstr "Falha ao decodificar a resposta da API do proxy."
+
+#. translators: %s: missing field key name
+#: src/Localization/Messages.php:12
+#, php-format
+msgid "Field %s is empty."
+msgstr "O campo %s está vazio."
+
+#: src/Localization/AdminTranslations.php:225
+msgid "Field contains an error"
+msgstr "O campo contém um erro"
+
+#: src/Localization/AdminTranslations.php:20
+msgid "Fill API details from Amazon Product Advertising dashboard to start"
+msgstr ""
+"Para começar, preencha os detalhes da API no painel Product Advertising."
+
+#: src/Localization/AdminTranslations.php:55
+msgid "Find your API credentials"
+msgstr "Encontre suas informações de login da API"
+
+#: src/Localization/AdminTranslations.php:155
+msgid "Find your Tracking ID"
+msgstr "Localize sua ID de rastreamento"
+
+#: src/Localization/AdminTranslations.php:167
+msgid ""
+"First thing first, you need to create a post. Make sure to create the post "
+"with the specific niche to be more related with your visitors."
+msgstr ""
+"O primeiro passo é criar um post. Crie uma publicação visando um nicho "
+"específico para ter mais afinidade com seu público."
+
+#: src/Localization/AdminTranslations.php:95
+msgid ""
+"Follow this step-by-step guide to start earning your affiliate commission in "
+"no time."
+msgstr ""
+"Siga este guia passo a passo para começar a ganhar sua comissão num piscar "
+"de olhos."
+
+#: src/Localization/AdminTranslations.php:48
+msgid "For each product, generate and paste your affiliate link."
+msgstr "Para cada produto, gere e cole seu link de afiliado."
+
+#: src/Localization/AdminTranslations.php:226
+msgid "Form is invalid or already saving"
+msgstr "O formulário é inválido ou já está sendo salvo"
+
+#: src/Localization/AdminTranslations.php:298
+msgid "France"
+msgstr "França"
+
+#: src/Localization/AdminTranslations.php:156
+msgid "General"
+msgstr "Geral"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:984
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2674
+#, fuzzy
+msgid "General Settings"
+msgstr "Configurações gerais"
+
+#: src/Localization/AdminTranslations.php:259
+msgid "General settings"
+msgstr "Configurações gerais"
+
+#: src/Localization/AdminTranslations.php:299
+msgid "Germany"
+msgstr "Alemanha"
+
+#: src/Localization/AdminTranslations.php:115
+msgid "Get Started"
+msgstr "Comece agora mesmo"
+
+#: src/Localization/AdminTranslations.php:149
+msgid "Get started with our plugin"
+msgstr "Comece a usar nosso plugin"
+
+#: src/Localization/AdminTranslations.php:15
+msgid "Getting Started"
+msgstr "Primeiros passos"
+
+#: src/Localization/AdminTranslations.php:127
+msgid "Getting started"
+msgstr "Primeiros passos"
+
+#: src/Localization/AdminTranslations.php:151
+msgid "Got it"
+msgstr "Entendi"
+
+#. translators: %s: Amazon store region
+#: src/Setup/Blocks.php:219
+#, php-format
+msgid "Here you will see products from your store region on <b>%s</b>."
+msgstr "Veja os produtos da região da sua loja na região <b>%s</b> da Amazon."
+
+#: src/Setup/Blocks.php:221
+msgid "Here you will see products from your store region."
+msgstr "Aqui você verá os produtos da região de sua loja."
+
+#: src/Localization/AdminTranslations.php:251
+msgid "Highlight settings"
+msgstr "Configurações de destaque"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:360
+#: amazon-gutenberg-block/src/edit.js:673
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2050
+#: amazon-gutenberg-block/dist/index.js:2363
+#, fuzzy
+msgid "Horizontal cards"
+msgstr "Cartões horizontais"
+
+#. Author of the plugin
+#: hostinger-affiliate-plugin.php
+msgid "Hostinger"
+msgstr "Hostinger"
+
+#: src/Localization/AdminTranslations.php:163
+msgid "Hostinger Academy"
+msgstr "Hostinger Academy"
+
+#: src/Localization/AdminTranslations.php:13
+msgid "Hostinger Affiliate"
+msgstr "Afiliados Hostinger"
+
+#. Plugin Name of the plugin
+#: hostinger-affiliate-plugin.php
+#| msgid "Hostinger Amazon Affiliate Marketing Tools"
+msgid "Hostinger Affiliate Marketing Tools"
+msgstr "Ferramentas de Marketing de Afiliados Hostinger"
+
+#: src/Admin/Surveys/AmazonSurvey.php:24
+msgid "How could we improve the Hostinger Affiliate plugin for Amazon?"
+msgstr ""
+"Como podemos melhorar o plugin de Afiliados da Hostinger para a Amazon?"
+
+#: src/Admin/Surveys/MercadoSurvey.php:24
+msgid "How could we improve the Hostinger Affiliate plugin for Mercado Libre?"
+msgstr ""
+"Como podemos melhorar o plugin de Afiliados da Hostinger para o Mercado "
+"Livre?"
+
+#: amazon-gutenberg-block/dist/index.js:1
+#: amazon-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/src/components/product_selector.js:74
+#: amazon-gutenberg-block/src/components/product_selector.js:143
+#: amazon-gutenberg-block/src/components/product_selector_multiple.js:106
+#: mercado-gutenberg-block/dist/index.js:1
+#: amazon-gutenberg-block/dist/index.js:432
+#: amazon-gutenberg-block/dist/index.js:501
+#: amazon-gutenberg-block/dist/index.js:655
+#, fuzzy
+msgid "How do you want to add the product?"
+msgstr "Como você deseja adicionar o produto?"
+
+#: amazon-gutenberg-block/dist/index.js:1
+#: amazon-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/src/components/product_list_bestsellers.js:74
+#: amazon-gutenberg-block/src/components/product_list_type_selector.js:17
+#: amazon-gutenberg-block/src/components/product_selector_multiple.js:95
+#: mercado-gutenberg-block/dist/index.js:1
+#: amazon-gutenberg-block/dist/index.js:243
+#: amazon-gutenberg-block/dist/index.js:304
+#: amazon-gutenberg-block/dist/index.js:644
+#, fuzzy
+msgid "How do you want to generate the list of the products?"
+msgstr "Como você deseja gerar a lista de produtos?"
+
+#: src/Localization/AdminTranslations.php:179
+msgid "How to create a product listing using our plugin?"
+msgstr "Como criar uma listagem de produtos usando nosso plugin?"
+
+#: src/Localization/AdminTranslations.php:17
+msgid "How to create a product listing with our plugin?"
+msgstr "Como criar uma listagem de produtos com nosso plugin?"
+
+#: src/Localization/AdminTranslations.php:237
+msgid "How to do that?"
+msgstr "Como fazer isso?"
+
+#: src/Localization/AdminTranslations.php:205
+msgid "How to get your affiliate link"
+msgstr "Como conseguir seu link de afiliado"
+
+#: src/Localization/AdminTranslations.php:164
+#| msgid ""
+#| "How to Set Up Amazon Affiliate with Hostinger Amazon Affiliate Connector -"
+#| " Step by step guide"
+msgid ""
+"How to Set Up Amazon Affiliate with Hostinger Amazon Affiliate - Step by "
+"step guide"
+msgstr ""
+"Como configurar o programa de afiliados da Amazon com o plugin Conector de "
+"Afiliados Amazon da Hostinger - Guia passo a passo"
+
+#: src/Localization/AdminTranslations.php:165
+msgid "How to use this plugin?"
+msgstr "Como usar o plugin?"
+
+#: src/Admin/Surveys/AmazonSurvey.php:20
+msgid "How would you rate your experience publishing Amazon Affiliate links?"
+msgstr "Como você avalia sua experiência publicando links de afiliados Amazon?"
+
+#: src/Admin/Surveys/MercadoSurvey.php:20
+msgid ""
+"How would you rate your experience publishing Mercado Libre Affiliate links?"
+msgstr ""
+"Como você avalia sua experiência publicando links de afiliados do Mercado "
+"Livre?"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: hostinger-affiliate-plugin.php
+msgid "https://hostinger.com"
+msgstr "https://hostinger.com.br"
+
+#: src/Localization/AdminTranslations.php:22
+msgid ""
+"In order to get the Amazon API information, you need to log in to your <b>"
+"Amazon Associate</b> account."
+msgstr ""
+"Para obter as informações da API da Amazon, você precisa fazer login na sua "
+"conta de <b>Associado da Amazon</b>."
+
+#: src/Localization/AdminTranslations.php:34
+msgid ""
+"In the editor, type '/' or click the '+' icon. Then, select 'Link Amazon "
+"products'."
+msgstr ""
+"No editor, digite \"/\" ou clique no ícone \"+\". Em seguida, selecione "
+"\"Vincular produtos Amazon\"."
+
+#: src/Localization/AdminTranslations.php:45
+msgid ""
+"In the editor, type '/' or click the '+' icon. Then, select 'Link Mercado "
+"Livre products'."
+msgstr ""
+"No editor, digite \"/\" ou clique no ícone \"+\". Em seguida, selecione "
+"\"Vincular produtos do Mercado Livre\"."
+
+#: src/Localization/AdminTranslations.php:300
+msgid "India"
+msgstr "Índia"
+
+#: src/Localization/AdminTranslations.php:97
+msgid "Insert API code inside the Amazon Product Advertising dashboard."
+msgstr "Insira o código da API no painel Amazon Product Advertising."
+
+#: amazon-gutenberg-block/dist/index.js:1
+#: amazon-gutenberg-block/src/components/product_list_bestsellers.js:85
+#: amazon-gutenberg-block/dist/index.js:254
+#, fuzzy
+msgid "Insert the product keyword, we will show the best-seller products"
+msgstr ""
+"Insira a palavra-chave do produto e mostraremos os produtos mais vendidos"
+
+#: src/Localization/AdminTranslations.php:169
+#| msgid ""
+#| "Inside Block Editor, you can call Hostinger Amazon Affiliate in the block "
+#| "options. You can call it by typing “/” or click the add button in the "
+#| "right side of the paragraph."
+msgid ""
+"Inside Block Editor, you can call Hostinger Amazon Affiliate in the block "
+"options. You can call it by typing \"/\" or click the add button in the "
+"right side of the paragraph."
+msgstr ""
+"Dentro do Editor de Blocos, você pode inserir o bloco Hostinger Amazon "
+"Affiliate pelas opções do editor. Você pode fazer isso digitando \"/\" ou "
+"clicando no botão de adicionar à direita do parágrafo."
+
+#: src/Localization/AdminTranslations.php:216
+msgid "Invalid ASIN"
+msgstr "ASIN inválido"
+
+#: src/Rest/SettingsRoutes.php:183
+msgid "Invalid locale selected. Please choose a valid locale."
+msgstr "Localidade inválida selecionada. Escolha uma localidade válida."
+
+#: src/Rest/templates/search-results.php:104
+#: src/Shortcodes/ProductTableShortcode.php:161
+#: src/Shortcodes/templates/lists/horizontal-cards.php:74
+#: src/Shortcodes/templates/lists/list-with-description.php:72
+#: src/Shortcodes/templates/lists/simplified-list.php:66
+#: src/Shortcodes/templates/product-card.php:60
+msgid "Is prime"
+msgstr "Prime"
+
+#: src/Localization/AdminTranslations.php:301
+msgid "Italy"
+msgstr "Itália"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:369
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2059
+#, fuzzy
+msgid "Items to show"
+msgstr "Itens a serem exibidos"
+
+#: src/Localization/AdminTranslations.php:302
+msgid "Japan"
+msgstr "Japão"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:774
+#: amazon-gutenberg-block/dist/index.js:2464
+#, fuzzy
+msgid "Keywords"
+msgstr "Palavras-chave"
+
+#: src/Localization/AdminTranslations.php:253
+msgid "Label"
+msgstr "Rótulo"
+
+#: src/Localization/AdminTranslations.php:61
+msgid "Language"
+msgstr "Idioma"
+
+#: src/Localization/AdminTranslations.php:64
+msgid "Language of Preference"
+msgstr "Idioma de preferência"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:657
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2347
+#, fuzzy
+msgid "Layout"
+msgstr "Layout"
+
+#: src/Localization/AdminTranslations.php:147
+msgid ""
+"Learn how to create product listings using Hostinger's affiliate plugin – "
+"and start earning commission."
+msgstr ""
+"Saiba como criar listas de produtos usando o plugin de afiliado da Hostinger "
+"e comece a ganhar comissões."
+
+#: src/Localization/AdminTranslations.php:148
+msgid ""
+"Learn how to use Hostinger's Amazon Affiliate with our tutorials and "
+"documentations"
+msgstr ""
+"Saiba como usar o Associados Amazon da Hostinger com nossos tutoriais e "
+"documentações"
+
+#: src/Localization/AdminTranslations.php:128
+msgid "Learn how to use our affiliate plugin."
+msgstr "Saiba como usar nosso plugin de afiliado."
+
+#: src/Localization/AdminTranslations.php:150
+msgid "Learn how to use our plugin"
+msgstr "Descubra como utilizar nosso plugin"
+
+#: src/Localization/AdminTranslations.php:146
+msgid "Learn more on how to use this plugin"
+msgstr "Saiba mais sobre como usar esse plugin"
+
+#: src/Localization/AdminTranslations.php:160
+msgid "Leave without saving"
+msgstr "Sair sem salvar"
+
+#: amazon-gutenberg-block/dist/index.js:4
+#: amazon-gutenberg-block/src/index.js:11
+#: amazon-gutenberg-block/dist/index.js:5782
+#, fuzzy
+msgid "Link Amazon product(s)"
+msgstr "Link do(s) produto(s) da Amazon"
+
+#: src/Localization/AdminTranslations.php:100
+msgid "Link Amazon Products"
+msgstr "Vincular produtos da Amazon"
+
+#: mercado-gutenberg-block/dist/index.js:2
+#, fuzzy
+msgid "Link Mercado Livre products"
+msgstr "Link Produtos do Mercado Livre"
+
+#: src/Localization/AdminTranslations.php:84
+#| msgid ""
+#| "Link your Amazon account to your website, start promoting products, and "
+#| "earn rewards."
+msgid ""
+"Link your Amazon account to your website, start promoting products, and earn "
+"rewards. No API key required."
+msgstr ""
+"Vincule sua conta Amazon ao seu site, comece a divulgar produtos e receba "
+"comissões. Sem necessidade de chave API."
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:350
+#: amazon-gutenberg-block/src/edit.js:665
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2040
+#: amazon-gutenberg-block/dist/index.js:2355
+#, fuzzy
+msgid "List with description"
+msgstr "Lista com descrição"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:908
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2598
+#, fuzzy
+msgid "Lists"
+msgstr "Listas"
+
+#: src/Localization/AdminTranslations.php:21
+msgid "Log in to Amazon Associate dashboard"
+msgstr "Faça login no painel de controle do Associado da Amazon"
+
+#: src/Localization/AdminTranslations.php:23
+msgid "Login"
+msgstr "Login"
+
+#: src/Localization/AdminTranslations.php:132
+msgid "Manage"
+msgstr "Gerenciar"
+
+#: src/Localization/AdminTranslations.php:18
+msgid "Manage marketplaces"
+msgstr "Gerenciar marketplaces"
+
+#: src/Localization/AdminTranslations.php:140
+msgid "Manage table"
+msgstr "Gerenciar tabela"
+
+#: src/Localization/AdminTranslations.php:117
+msgid "Manage your Amazon API and other configurations"
+msgstr "Gerencie sua API Amazon e outras configurações"
+
+#: src/Localization/AdminTranslations.php:130
+msgid "Manage your Amazon API and other settings."
+msgstr "Gerencie sua API da Amazon e outras configurações."
+
+#: src/Localization/AdminTranslations.php:193
+#, fuzzy
+msgid "Manage your Mercado Livre general settings."
+msgstr "Gerencie suas configurações gerais do Mercado Livre."
+
+#: amazon-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/src/components/product_selector_multiple.js:101
+#: amazon-gutenberg-block/src/components/product_selector_multiple.js:181
+#: mercado-gutenberg-block/dist/index.js:1
+#: amazon-gutenberg-block/dist/index.js:650
+#: amazon-gutenberg-block/dist/index.js:730
+#, fuzzy
+msgid "Manually add the products"
+msgstr "Adicionar manualmente os produtos"
+
+#: src/Localization/AdminTranslations.php:111
+msgid "Marketplace availability by country"
+msgstr "Disponibilidade do marketplace por país"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:302
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:1992
+#, fuzzy
+msgid "Maximum count of characters for each product description list item."
+msgstr ""
+"Contagem máxima de caracteres para cada item da lista de descrição do "
+"produto."
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:206
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:1896
+#, fuzzy
+msgid "Maximum count of characters for the product title."
+msgstr "Número máximo de caracteres para o título do produto."
+
+#: src/Localization/AdminTranslations.php:27
+#: src/Localization/AdminTranslations.php:154
+#: src/Localization/AdminTranslations.php:250
+msgid "Menu"
+msgstr "Menu"
+
+#: src/Localization/AdminTranslations.php:72
+msgid "Mercado Livre"
+msgstr "Mercado Livre"
+
+#: src/Localization/AdminTranslations.php:74
+msgid "Mercado Livre Partner"
+msgstr "Parceiro do Mercado Livre"
+
+#: src/Localization/AdminTranslations.php:112
+msgid "Mercado Livre Partner settings"
+msgstr "Configurações de parceiros do Mercado Livre"
+
+#: src/Localization/AdminTranslations.php:196
+msgid "Mercado settings were successfully saved!"
+msgstr "As configurações do Mercado foram salvas com sucesso!"
+
+#: src/Localization/AdminTranslations.php:303
+msgid "Mexico"
+msgstr "México"
+
+#: src/Localization/AdminTranslations.php:280
+msgid "More information"
+msgstr "Mais informações"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/components/product_selector_multiple.js:204
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:753
+#, fuzzy
+msgid "Multiple ASIN values can be separated by comma"
+msgstr "Vários valores ASIN podem ser separados por vírgula"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/components/products_selected.js:388
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:1244
+#, fuzzy
+msgid ""
+"Multiple ASIN values can be separated by comma. Press Enter to save changes."
+msgstr ""
+"Vários valores ASIN podem ser separados por vírgula. Pressione Enter para "
+"salvar as alterações."
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/components/products_selected.js:387
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:1243
+#, fuzzy
+msgid ""
+"Multiple product id values can be separated by comma. Press Enter to save "
+"changes."
+msgstr ""
+"Vários valores de ID de produto podem ser separados por vírgula. Pressione "
+"Enter para salvar as alterações."
+
+#: src/Localization/AdminTranslations.php:109
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:324
+#: amazon-gutenberg-block/src/edit.js:1003
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2014
+#: amazon-gutenberg-block/dist/index.js:2693
+msgid "Multiple Product List"
+msgstr "Lista de vários produtos"
+
+#: src/Localization/AdminTranslations.php:290
+msgid "Name"
+msgstr "Nome"
+
+#: src/Localization/AdminTranslations.php:266
+msgid "Name field not added to all product data rows."
+msgstr "O campo Nome não foi adicionado a todas as linhas de dados do produto."
+
+#: src/Localization/AdminTranslations.php:304
+msgid "Netherlands"
+msgstr "Holanda"
+
+#: src/Localization/AdminTranslations.php:121
+msgid "New comparison table"
+msgstr "Nova tabela de comparação"
+
+#: src/Localization/AdminTranslations.php:183
+msgid "New table"
+msgstr "Nova tabela"
+
+#: src/Api/Mercado/Client.php:141
+#, fuzzy
+msgid "No HTML content found in proxy API response."
+msgstr "Nenhum conteúdo HTML encontrado na resposta da API do proxy."
+
+#: src/Shortcodes/templates/product-list.php:28
+msgid "No layout selected."
+msgstr "Nenhum layout selecionado."
+
+#: src/Localization/AdminTranslations.php:273
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/components/ui/List.jsx:13
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:1474
+msgid "No matching options"
+msgstr "Nenhuma opção correspondente"
+
+#: src/Localization/AdminTranslations.php:233
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/components/ui/Dropdown.jsx:48
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:1414
+msgid "No options"
+msgstr "Nenhuma opção encontrada"
+
+#: src/Setup/Blocks.php:200
+msgid "No products found"
+msgstr "Nenhum produto encontrado"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/components/products_selected.js:178
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:1034
+#, fuzzy
+msgid "No products selected"
+msgstr "Nenhum produto selecionado"
+
+#: src/Rest/ItemsRoutes.php:65
+msgid "No results found."
+msgstr "Nenhum resultado encontrado."
+
+#: src/Localization/AdminTranslations.php:317
+msgid "Not now"
+msgstr "Agora não"
+
+#: src/Localization/AdminTranslations.php:134
+msgid "Nothing found"
+msgstr "Nada encontrado"
+
+#: src/Localization/AdminTranslations.php:70
+msgid ""
+"Once you remove it, fetching products from this marketplace in WordPress "
+"will be turned off. Your existing product listings won\\’t be affected. You "
+"can re-add this marketplace anytime."
+msgstr ""
+"Ao removê-lo, a busca de produtos deste marketplace no WordPress será "
+"desativada. As listagens de produtos já existentes não serão afetadas. Você "
+"poderá adicionar esse marketplace novamente a qualquer momento."
+
+#: src/Localization/AdminTranslations.php:176
+msgid "Open full guide"
+msgstr "Abrir guia completo"
+
+#: src/Localization/AdminTranslations.php:118
+msgid "Open guide"
+msgstr "Abrir guia"
+
+#: src/Localization/AdminTranslations.php:56
+msgid "Optional"
+msgstr "Opcional"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:434
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2124
+#, fuzzy
+msgid "OR"
+msgstr "OU"
+
+#: src/Localization/AdminTranslations.php:215
+#: amazon-gutenberg-block/dist/index.js:1
+#: amazon-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:4
+#: amazon-gutenberg-block/src/components/product_list_type_selector.js:42
+#: amazon-gutenberg-block/src/components/product_selector.js:105
+#: amazon-gutenberg-block/src/components/product_selector_multiple.js:137
+#: amazon-gutenberg-block/src/views/TableConfiguration.jsx:69
+#: mercado-gutenberg-block/dist/index.js:1
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:329
+#: amazon-gutenberg-block/dist/index.js:463
+#: amazon-gutenberg-block/dist/index.js:686
+#: amazon-gutenberg-block/dist/index.js:2851
+msgid "or"
+msgstr "ou"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:263
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:1953
+#, fuzzy
+msgid "Overwrite product description"
+msgstr "Substituir a descrição do produto"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:250
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:1940
+#, fuzzy
+msgid "Overwrite product description?"
+msgstr "Substituir a descrição do produto?"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:226
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:1916
+#, fuzzy
+msgid "Overwrite product title?"
+msgstr "Substituir o título do produto?"
+
+#: src/Localization/AdminTranslations.php:36
+msgid "Paste the ASIN code or type to search for products you want to promote."
+msgstr ""
+"Cole ou digite o código ASIN para pesquisar os produtos que você quer "
+"divulgar."
+
+#: src/Localization/AdminTranslations.php:47
+msgid ""
+"Paste the Product ID or type to search for products you want to promote."
+msgstr ""
+"Cole ou digite o ID do produto para pesquisar os produtos que você quer "
+"divulgar."
+
+#: src/Localization/AdminTranslations.php:42
+#: src/Localization/AdminTranslations.php:204
+msgid "Paste your affiliate link"
+msgstr "Cole seu link de afiliado"
+
+#: src/Localization/AdminTranslations.php:224
+msgid "Please check the field - see error message above"
+msgstr "Verifique o campo - veja a mensagem de erro acima"
+
+#: src/Shortcodes/ShortcodeManager.php:62
+msgid "Please choose display type!"
+msgstr "Escolha o tipo de exibição!"
+
+#: src/Localization/AdminTranslations.php:185
+msgid "Please enter a keyword for search!"
+msgstr "Informe uma palavra-chave para pesquisar!"
+
+#: src/Shortcodes/ProductListShortcode.php:99
+#| msgid "Please enter keywords!"
+msgid "Please enter keyword(-s)!"
+msgstr "Digite as palavras-chave!"
+
+#: src/Shortcodes/ProductCardShortcode.php:77
+#: src/Shortcodes/ProductListShortcode.php:112
+msgid "Please enter product(-s) ASIN(-s)!"
+msgstr "Informe o código ASIN dos produtos!"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/components/products_selected.js:59
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:915
+#, fuzzy
+msgid "Please provide affiliate URLs for all products"
+msgstr "Forneça URLs de afiliados para todos os produtos"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/components/product_selector_multiple.js:283
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:832
+#, fuzzy
+msgid "Please select a layout for your product list."
+msgstr "Selecione um layout para sua lista de produtos."
+
+#: src/Localization/AdminTranslations.php:305
+msgid "Poland"
+msgstr "Polônia"
+
+#: src/Localization/AdminTranslations.php:279
+#: src/Repositories/TableRepository.php:298
+msgid "Price"
+msgstr "Preço"
+
+#: src/Repositories/TableRepository.php:299
+msgid "Prime Status"
+msgstr "Status Prime"
+
+#: src/Localization/AdminTranslations.php:207
+msgid "Product data"
+msgstr "Dados do produto"
+
+#: src/Localization/AdminTranslations.php:119
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/components/products_selected.js:217
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:1073
+msgid "Product ID"
+msgstr "ID do produto"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:148
+#: amazon-gutenberg-block/dist/index.js:1838
+#, fuzzy
+msgid "Product limit reached: You can add up to 15 products only."
+msgstr ""
+"Limite de produtos atingido: Você pode adicionar até 15 produtos apenas."
+
+#: src/Localization/AdminTranslations.php:202
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/components/products_selected.js:247
+#: amazon-gutenberg-block/src/components/products_selected.js:251
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:1103
+#: amazon-gutenberg-block/dist/index.js:1107
+msgid "Product URL"
+msgstr "URL do produto"
+
+#: src/Localization/AdminTranslations.php:287
+msgid "Product visible"
+msgstr "Produto visível"
+
+#: src/Localization/AdminTranslations.php:283
+msgid "Products"
+msgstr "Produtos"
+
+#: src/Shortcodes/ProductCardShortcode.php:87
+#: src/Shortcodes/ProductListShortcode.php:123
+msgid "Products not fetched from DB and/or API. Please check debug logs."
+msgstr ""
+"Não foi possível buscar os produtos no banco de dados e/ou na API. Verifique "
+"os registros de depuração."
+
+#. translators: %s: Amazon store region
+#: src/Setup/Blocks.php:188
+#, php-format
+msgid ""
+"Products that shown in here is from your store region (%1$s). You can change "
+"store region in <a href=\"%2$s\">Settings page</a>."
+msgstr ""
+"Os produtos mostrados aqui são da região da sua loja (%1$s). Não é possível "
+"alterar a região da loja na <a href=\"%2$s\">página Configurações</a>."
+
+#: src/Localization/AdminTranslations.php:201
+msgid "Products to be compared"
+msgstr "Produtos a serem comparados"
+
+#: src/Api/Mercado/Client.php:150
+#, fuzzy
+msgid "Proxy API request failed."
+msgstr "Falha na solicitação da API do proxy."
+
+#: src/Localization/AdminTranslations.php:246
+msgid "Publish"
+msgstr "Publicar"
+
+#: src/Localization/AdminTranslations.php:32
+#: src/Localization/AdminTranslations.php:43
+#: src/Localization/AdminTranslations.php:174
+msgid "Publish the post"
+msgstr "Publicar o post"
+
+#: src/Localization/AdminTranslations.php:243
+msgid "Published"
+msgstr "Publicado"
+
+#: src/Localization/AdminTranslations.php:108
+msgid "Put focus on one product only."
+msgstr "Coloque seu foco em apenas um produto."
+
+#: src/Localization/AdminTranslations.php:238
+msgid "Quick way to add this table inside the Block Editor."
+msgstr "Um método rápido para adicionar essa tabela no Editor de Blocos."
+
+#: src/Localization/AdminTranslations.php:177
+msgid "Read full documentation"
+msgstr "Ler a documentação completa"
+
+#: src/Localization/AdminTranslations.php:75
+msgid "Remove"
+msgstr "Remover"
+
+#: src/Localization/AdminTranslations.php:68
+msgid "Remove Amazon?"
+msgstr "Remover Amazon?"
+
+#: src/Localization/AdminTranslations.php:252
+msgid "Remove highlight"
+msgstr "Remover destaque"
+
+#: src/Localization/AdminTranslations.php:69
+msgid "Remove Mercado Livre?"
+msgstr "Remover Mercado Livre?"
+
+#: src/Localization/AdminTranslations.php:191
+#, fuzzy
+msgid "Remove product from selection"
+msgstr "Remover produto da seleção"
+
+#: src/Localization/AdminTranslations.php:257
+msgid "Row data"
+msgstr "Dados brutos"
+
+#: src/Localization/AdminTranslations.php:284
+msgid "Rows"
+msgstr "Linhas"
+
+#: src/Localization/AdminTranslations.php:307
+msgid "Saudi Arabia"
+msgstr "Arábia Saudita"
+
+#: src/Localization/AdminTranslations.php:81
+msgid "Save"
+msgstr "Salvar"
+
+#: src/Localization/AdminTranslations.php:161
+msgid "Save & leave"
+msgstr "Salvar e sair"
+
+#: src/Localization/AdminTranslations.php:157
+#: src/Localization/AdminTranslations.php:258
+msgid "Save changes"
+msgstr "Salvar alterações"
+
+#: src/Localization/AdminTranslations.php:158
+msgid "Save changes?"
+msgstr "Salvar alterações?"
+
+#: src/Localization/AdminTranslations.php:194 src/Setup/Blocks.php:179
+#: mercado-gutenberg-block/dist/index.js:2
+msgid "Search"
+msgstr "Pesquisar"
+
+#: src/Localization/AdminTranslations.php:101
+msgid ""
+"Search for <b>Link to Amazon Products</b> in Gutenberg Blocks, find the "
+"product(s) you want to add, and publish the post."
+msgstr ""
+"Pesquise <b>Vincular produtos da Amazon</b> no editor de bloco Gutenberg, "
+"encontre o(s) produto(s) que você deseja adicionar e publique o post."
+
+#: src/Setup/Blocks.php:214
+msgid "Search for product name that you want to add to your blog post."
+msgstr ""
+"Pesquise o nome do produto que você quer adicionar ao post do seu blog."
+
+#: mercado-gutenberg-block/dist/index.js:2
+#, fuzzy
+msgid "Search for products or enter a product ID"
+msgstr "Pesquisar produtos ou inserir uma ID de produto"
+
+#: src/Localization/AdminTranslations.php:256
+msgid "Search for products or enter Product ID"
+msgstr "Pesquisar produtos ou inserir ID do produto"
+
+#: src/Localization/AdminTranslations.php:255
+msgid "Search for products or enter the ASIN code"
+msgstr "Pesquise produtos ou digite o código ASIN"
+
+#: src/Localization/AdminTranslations.php:234
+#: amazon-gutenberg-block/dist/index.js:1
+#: amazon-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/components/product_list_type_selector.js:55
+#: amazon-gutenberg-block/src/components/product_selector.js:119
+#: amazon-gutenberg-block/src/components/product_selector_multiple.js:151
+#: amazon-gutenberg-block/src/edit.js:640
+#: mercado-gutenberg-block/dist/index.js:1
+#: amazon-gutenberg-block/dist/index.js:342
+#: amazon-gutenberg-block/dist/index.js:477
+#: amazon-gutenberg-block/dist/index.js:700
+#: amazon-gutenberg-block/dist/index.js:2330
+msgid "Search for the product in Amazon"
+msgstr "Pesquisar produto na Amazon"
+
+#: src/Setup/Blocks.php:197 src/Setup/Blocks.php:208
+msgid "Search icon"
+msgstr "Ícone de pesquisa"
+
+#: src/Setup/Blocks.php:177
+msgid "Search product name ..."
+msgstr "Pesquisar nome do produto..."
+
+#: src/Localization/AdminTranslations.php:184
+msgid "Search your table collections"
+msgstr "Pesquise suas coleções de tabelas"
+
+#: src/Setup/Blocks.php:211
+msgid "Searched products will appear here"
+msgstr "Os produtos pesquisados vão aparecer aqui"
+
+#: src/Localization/AdminTranslations.php:60
+msgid "Secret key"
+msgstr "Chave secreta"
+
+#: src/Localization/AdminTranslations.php:78
+msgid "Secret key must be 40 characters long"
+msgstr "A chave secreta deve ter 40 caracteres"
+
+#: src/Localization/AdminTranslations.php:79
+msgid ""
+"Secret key must contain only numbers, letters or the special characters \"."
+"\" and \"/\""
+msgstr ""
+"A chave secreta deve conter apenas números, letras ou os caracteres "
+"especiais \".\" e \"/\""
+
+#: amazon-gutenberg-block/dist/index.js:1
+#: amazon-gutenberg-block/src/components/DisplayTypeSelector.jsx:42
+#: mercado-gutenberg-block/dist/index.js:1
+#: amazon-gutenberg-block/dist/index.js:42
+#, fuzzy
+msgid "Select"
+msgstr "Selecione"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:986
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2676
+#, fuzzy
+msgid "Select A Display Type"
+msgstr "Selecionar um tipo de tela"
+
+#: src/Localization/AdminTranslations.php:26
+msgid "Select a marketplace you’ll use to promote products"
+msgstr "Selecione o marketplace que você usará para divulgar produtos"
+
+#: src/Setup/Blocks.php:231
+msgid "Select at least 2 products to continue"
+msgstr "Selecione pelo menos 2 produtos para continuar"
+
+#: src/Localization/AdminTranslations.php:62
+msgid "Select at least one provider"
+msgstr "Selecione ao menos um provedor"
+
+#: src/Localization/AdminTranslations.php:57
+msgid "Select country first to find matching tracking ID"
+msgstr ""
+"Selecione primeiro o país para encontrar o ID de rastreamento correspondente"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:621
+#: amazon-gutenberg-block/dist/index.js:2311
+#, fuzzy
+msgid "Select How To Display Products"
+msgstr "Selecione como exibir produtos"
+
+#: src/Localization/AdminTranslations.php:222
+msgid "Select your country"
+msgstr "Selecione seu país"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/components/products_selected.js:182
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:1038
+#, fuzzy
+msgid "selected"
+msgstr "selecionado"
+
+#: src/Localization/AdminTranslations.php:228
+msgid "Server error occurred"
+msgstr "Ocorreu um erro no servidor"
+
+#: src/Localization/AdminTranslations.php:227
+msgid "Server returned an error"
+msgstr "O servidor retornou um erro"
+
+#: src/Localization/AdminTranslations.php:129
+msgid "Settings"
+msgstr "Configurações"
+
+#: src/Localization/AdminTranslations.php:239
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: src/Localization/AdminTranslations.php:144
+msgid "Shortcode copied!"
+msgstr "Shortcode copiado!"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:237
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:1927
+#, fuzzy
+msgid "Show product description?"
+msgstr "Mostrar a descrição do produto?"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:355
+#: amazon-gutenberg-block/src/edit.js:669
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2045
+#: amazon-gutenberg-block/dist/index.js:2359
+#, fuzzy
+msgid "Simplified list"
+msgstr "Lista simplificada"
+
+#: src/Localization/AdminTranslations.php:306
+msgid "Singapore"
+msgstr "Cingapura"
+
+#: src/Localization/AdminTranslations.php:107
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:314
+#: amazon-gutenberg-block/src/edit.js:998
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2004
+#: amazon-gutenberg-block/dist/index.js:2688
+msgid "Single Product Card"
+msgstr "Cartão de produto único"
+
+#: src/Localization/AdminTranslations.php:120
+msgid "Something went wrong"
+msgstr "Algo deu errado"
+
+#: src/Rest/TableRoutes.php:207
+msgid "Sorry, table does not exists."
+msgstr "Essa tabela não existe."
+
+#: src/Rest/TableRoutes.php:29 src/Rest/TableRoutes.php:180
+#: src/Rest/TableRoutes.php:241
+msgid "Sorry, table id missing"
+msgstr "O ID da tabela não foi informado"
+
+#: src/Rest/ItemsRoutes.php:45 src/Rest/ItemsRoutes.php:121
+#: src/Rest/TableRoutes.php:153 src/Rest/TableRoutes.php:194
+msgid "Sorry, there are validation errors."
+msgstr "Ocorreram erros de validação."
+
+#: src/Api/Amazon/ProxyApi/Client.php:66
+msgid "Sorry, there was a problem with request."
+msgstr "Houve um problema com a solicitação."
+
+#: src/Rest/SettingsRoutes.php:161 src/Rest/SettingsRoutes.php:195
+msgid "Sorry, you are not allowed to do that."
+msgstr "Lamentamos, mas você não pode fazer isso."
+
+#: src/Localization/AdminTranslations.php:308
+msgid "Spain"
+msgstr "Espanha"
+
+#: src/Localization/AdminTranslations.php:94
+msgid "Start Earning in Four Easy Steps"
+msgstr "Comece a ganhar recompensas em quatro passos simples"
+
+#: src/Localization/AdminTranslations.php:92
+msgid "Start Earning Now"
+msgstr "Comece a ganhar agora mesmo"
+
+#: src/Localization/AdminTranslations.php:247
+msgid "Status"
+msgstr "Status"
+
+#: src/Localization/AdminTranslations.php:309
+msgid "Sweden"
+msgstr "Suécia"
+
+#: src/Setup/Cpts.php:40
+msgid "Table"
+msgstr "Tabela"
+
+#: src/Repositories/TableRepository.php:279
+msgid "Table added feature is missing title."
+msgstr "O recurso adicionado da tabela está sem título."
+
+#: src/Repositories/TableRepository.php:263
+msgid "Table added product is missing asin."
+msgstr "O produto adicionado da tabela está sem o código ASIN."
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:973
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2663
+#, fuzzy
+msgid "Table Configuration"
+msgstr "Configuração da tabela"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:861
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2551
+#, fuzzy
+msgid "Table data"
+msgstr "Dados da tabela"
+
+#: src/Localization/AdminTranslations.php:180
+msgid "Table data will be shown in this page"
+msgstr "Os dados da tabela serão exibidos nessa página"
+
+#: src/Repositories/TableRepository.php:48
+#: src/Repositories/TableRepository.php:58
+#: src/Repositories/TableRepository.php:116
+#: src/Repositories/TableRepository.php:126 src/Rest/TableRoutes.php:253
+#: src/Rest/TableRoutes.php:263
+msgid "Table does not exist."
+msgstr "A tabela não existe."
+
+#: src/Localization/AdminTranslations.php:199
+#: src/Localization/AdminTranslations.php:282
+msgid "Table name"
+msgstr "Nome da tabela"
+
+#: src/Repositories/TableRepository.php:248
+msgid "Table name is missing."
+msgstr "O nome da tabela não foi informado."
+
+#: src/Shortcodes/ProductTableShortcode.php:73
+msgid "Table not found or it is not published."
+msgstr "A tabela não foi encontrada ou não foi publicada."
+
+#: src/Shortcodes/ProductTableShortcode.php:66
+msgid "Table not found."
+msgstr "Tabela não encontrada."
+
+#: src/Repositories/TableRepository.php:269
+msgid "Table should have at least one feature added."
+msgstr "A tabela precisa ter pelo menos um recurso adicionado."
+
+#: src/Repositories/TableRepository.php:252
+msgid "Table should have at least one product added."
+msgstr "A tabela precisa ter pelo menos um produto adicionado."
+
+#: src/Repositories/TableRepository.php:285
+msgid "Table status is missing."
+msgstr "O status da tabela não foi informado."
+
+#: src/Localization/AdminTranslations.php:231
+msgid "Table was successfully created"
+msgstr "Tabela criada com sucesso"
+
+#: src/Localization/AdminTranslations.php:240
+msgid "Table was successfully deleted"
+msgstr "Tabela excluída com sucesso"
+
+#: src/Localization/AdminTranslations.php:221
+msgid "Table was successfully saved"
+msgstr "Tabela salva com sucesso"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:960
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2650
+#, fuzzy
+msgid "Templates and Styles"
+msgstr "Modelos e estilos"
+
+#: src/Localization/AdminTranslations.php:103
+msgid ""
+"That's it – every time visitors buy the product from your post, you will "
+"earn a commission from Amazon."
+msgstr ""
+"Prontinho! Sempre que comprarem produtos do seu post, você vai receber uma "
+"comissão da Amazon."
+
+#: src/Localization/AdminTranslations.php:175
+#| msgid ""
+#| "That’s it! After your post published, whenever your visitor buy the "
+#| "product from your post, you will earn commissions."
+msgid ""
+"That's it! After your post published, whenever your visitor buy the product "
+"from your post, you will earn commissions."
+msgstr ""
+"Prontinho! Após a publicação do post, você vai receber comissões sempre que "
+"comprarem produtos pelo seu post."
+
+#: src/Localization/AdminTranslations.php:37
+#: src/Localization/AdminTranslations.php:49
+msgid ""
+"That's it! Whenever a visitor buys a product through your link, you'll earn "
+"commission."
+msgstr ""
+"Prontinho! Sempre que um visitante comprar um produto pelo seu link, você "
+"ganhará uma comissão."
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:486
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2176
+#, fuzzy
+msgid ""
+"The block you are attempting to use is currently not supported in the Site "
+"Editor. We apologize for any inconvenience this may cause. Our team is "
+"actively working to enhance compatibility, and we appreciate your "
+"understanding. For the best editing experience, please consider using "
+"post/page editor or await future updates."
+msgstr ""
+"No momento, o bloco que você está tentando usar não é compatível com o Site "
+"Editor. Pedimos desculpas por qualquer inconveniente que isso possa causar. "
+"Nossa equipe está trabalhando ativamente para melhorar a compatibilidade e "
+"agradecemos sua compreensão. Para obter a melhor experiência de edição, "
+"considere a possibilidade de usar o editor de postagem/página ou aguarde "
+"futuras atualizações."
+
+#. translators: %s: PHP version
+#: hostinger-affiliate-plugin.php:106
+#, php-format
+msgid ""
+"The Hostinger Affiliate plugin requires minimum PHP version of <b>%s</b>. "
+msgstr ""
+"O plugin Afiliado Hostinger requer uma versão mínima do PHP de <b>%s</b>."
+
+#: src/Services/ProductFetchService.php:187
+#| msgid ""
+#| "There is an issue displaying Amazon products. Please contact "
+#| "administrator to check that."
+msgid ""
+"There is an issue displaying Amazon products. Please contact the "
+"administrator to check that."
+msgstr ""
+"Ocorreu um problema ao exibir seus produtos da Amazon. Entre em contato com "
+"o administrador para verificar esse problema."
+
+#: src/Localization/AdminTranslations.php:198
+msgid "There was an error saving your settings: "
+msgstr "Ocorreu um erro ao salvar suas configurações:"
+
+#: src/Localization/AdminTranslations.php:186
+msgid "There was an error searching for items: "
+msgstr "Ocorreu um erro ao pesquisar itens:"
+
+#: amazon-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/components/products_selected.js:14
+#: amazon-gutenberg-block/src/components/product_selector.js:18
+#: amazon-gutenberg-block/src/components/product_selector_multiple.js:28
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:376
+#: amazon-gutenberg-block/dist/index.js:577
+#: amazon-gutenberg-block/dist/index.js:870
+#, fuzzy
+msgid "There was an error validating product ids: "
+msgstr "Ocorreu um erro na validação dos IDs dos produtos:"
+
+#: mercado-gutenberg-block/dist/index.js:2
+#, fuzzy
+msgid "There was an error: "
+msgstr "Houve um erro:"
+
+#: src/Localization/AdminTranslations.php:192
+#: amazon-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/components/products_selected.js:93
+#: amazon-gutenberg-block/src/components/product_selector.js:54
+#: amazon-gutenberg-block/src/components/product_selector_multiple.js:64
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:412
+#: amazon-gutenberg-block/dist/index.js:613
+#: amazon-gutenberg-block/dist/index.js:949
+msgid "There was fatal server error while processing your request."
+msgstr "Ocorreu um erro de servidor fatal ao processar sua solicitação."
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:479
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2169
+#, fuzzy
+msgid "This block is not supported while using Site Editor"
+msgstr "Esse bloco não é compatível com o uso do Site Editor"
+
+#: src/Localization/AdminTranslations.php:223
+#: src/Localization/AdminTranslations.php:232
+msgid "This field is required"
+msgstr "Este campo é obrigatório"
+
+#: src/Localization/AdminTranslations.php:105
+msgid "Three Templates for Your Product(s) Block"
+msgstr "Três templates para seu bloco de produto(s)"
+
+#: src/Localization/AdminTranslations.php:278
+#: src/Repositories/TableRepository.php:297
+msgid "Thumbnail"
+msgstr "Miniatura"
+
+#: src/Localization/AdminTranslations.php:277
+#: src/Repositories/TableRepository.php:296
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:571
+#: amazon-gutenberg-block/src/edit.js:921
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2261
+#: amazon-gutenberg-block/dist/index.js:2611
+msgid "Title"
+msgstr "Título"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:193
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:1883
+#, fuzzy
+msgid "Title length"
+msgstr "Comprimento do título"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:220
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:1910
+#, fuzzy
+msgid "Title overwrite enabled?"
+msgstr "Substituição de título ativada?"
+
+#: amazon-gutenberg-block/dist/index.js:3
+#: amazon-gutenberg-block/src/edit.js:513
+#: amazon-gutenberg-block/dist/index.js:2203
+#, fuzzy
+msgid ""
+"To gain full access to this block, you need to connect your Amazon "
+"Partnership account."
+msgstr ""
+"Para obter acesso total a esse bloco, você precisa conectar sua conta da "
+"Amazon Partnership."
+
+#: mercado-gutenberg-block/dist/index.js:2
+#, fuzzy
+msgid ""
+"To gain full access to this block, you need to enable Mercado Livre "
+"integration."
+msgstr ""
+"Para obter acesso total a esse bloco, você precisa ativar a integração com o "
+"Mercado Livre."
+
+#: src/Localization/AdminTranslations.php:33
+#: src/Localization/AdminTranslations.php:44
+msgid "To start promoting products, first create a post."
+msgstr "Para começar a promover produtos, primeiro crie um post."
+
+#: src/Localization/AdminTranslations.php:66
+msgid "Tracking ID"
+msgstr "ID de rastreamento"
+
+#: src/Localization/AdminTranslations.php:53
+msgid "Tracking ID connected"
+msgstr "ID de rastreamento conectado"
+
+#: src/Localization/AdminTranslations.php:230
+msgid ""
+"Tracking ID format wrong. Lowercase letters, digits and _-. special chars "
+"are allowed."
+msgstr ""
+"Formato do ID de rastreamento incorreto. São permitidas letras minúsculas, "
+"dígitos e caracteres especiais _-."
+
+#: src/Localization/AdminTranslations.php:122
+#: src/Localization/AdminTranslations.php:136
+msgid "Try searching for something else"
+msgstr "Pesquise por outro item"
+
+#: src/Localization/AdminTranslations.php:310
+msgid "Turkey"
+msgstr "Turquia"
+
+#: src/Localization/AdminTranslations.php:141
+msgid "Tutorial"
+msgstr "Tutorial"
+
+#: src/Localization/AdminTranslations.php:162
+msgid "Tutorial video by"
+msgstr "Tutorial em vídeo por"
+
+#: src/Localization/AdminTranslations.php:291
+msgid "Type"
+msgstr "Tipo"
+
+#: amazon-gutenberg-block/dist/index.js:1
+#: amazon-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/src/components/product_selector.js:100
+#: amazon-gutenberg-block/src/components/product_selector_multiple.js:132
+#: mercado-gutenberg-block/dist/index.js:1
+#: amazon-gutenberg-block/dist/index.js:458
+#: amazon-gutenberg-block/dist/index.js:681
+#, fuzzy
+msgid "Type ASIN (Product ID)"
+msgstr "Tipo ASIN (ID do produto)"
+
+#: src/Localization/AdminTranslations.php:267
+msgid "Type field not added to all product data rows."
+msgstr ""
+"O campo \"tipo\" não foi adicionado a todas as linhas de dados do produto."
+
+#: amazon-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/src/components/product_selector_multiple.js:188
+#: mercado-gutenberg-block/dist/index.js:1
+#: amazon-gutenberg-block/dist/index.js:737
+#, fuzzy
+msgid "Type the ASINs (Product IDs)"
+msgstr "Digite os ASINs (IDs de produtos)"
+
+#: src/Localization/AdminTranslations.php:311
+msgid "United Arab Emirates"
+msgstr "Emirados Árabes Unidos"
+
+#: src/Localization/AdminTranslations.php:312
+msgid "United Kingdom"
+msgstr "Reino Unido"
+
+#: src/Localization/AdminTranslations.php:313
+msgid "United States"
+msgstr "Estados Unidos"
+
+#: src/Localization/Messages.php:24
+msgid "Unknown display type. Please re-select display type."
+msgstr "Tipo de exibição desconhecido. Selecione o tipo de exibição novamente."
+
+#: src/Localization/AdminTranslations.php:91
+msgid ""
+"Unlock the full potential of your website – monetize it with our plugin to "
+"earn more."
+msgstr ""
+"Explore o potencial máximo do seu site usando nosso plugin para monetizar e "
+"lucrar muito mais."
+
+#: src/Localization/AdminTranslations.php:245
+msgid "Unpublish"
+msgstr "Cancelar a publicação"
+
+#: src/Localization/AdminTranslations.php:270
+#: amazon-gutenberg-block/dist/index.js:4
+#: amazon-gutenberg-block/src/views/TableConfiguration.jsx:36
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2818
+msgid "Use the saved table configuration"
+msgstr "Use a configuração da tabela salva"
+
+#: src/Localization/AdminTranslations.php:131
+msgid "View guide"
+msgstr "Ver guia"
+
+#: mercado-gutenberg-block/dist/index.js:2
+#, fuzzy
+msgid "View Product on Mercado Livre"
+msgstr "Ver produto no Mercado Livre"
+
+#: src/Localization/AdminTranslations.php:242
+msgid "Visibility"
+msgstr "Visiblidade"
+
+#: src/Models/Product.php:284
+msgid "Watch on Amazon Prime"
+msgstr "Assistir no Amazon Prime"
+
+#: src/Localization/AdminTranslations.php:90
+#| msgid "Welcome to Hostinger Amazon Affiliate Connector!"
+msgid "Welcome to Hostinger Amazon Affiliate!"
+msgstr "Bem-vindos ao plugin Afiliados Amazon da Hostinger"
+
+#. translators: %s: user display name
+#: amazon-gutenberg-block/dist/index.js:4
+#: amazon-gutenberg-block/src/edit.js:1063
+#: amazon-gutenberg-block/dist/index.js:2753
+#, fuzzy, js-format
+msgid "Welcome, %s!"
+msgstr "Bem-vindo, %s!"
+
+#: src/Localization/AdminTranslations.php:286
+msgid "What's an ASIN code?"
+msgstr "O que é um código ASIN?"
+
+#: src/Localization/AdminTranslations.php:51
+#, fuzzy
+msgid ""
+"With the product block selected, open the Block tab in the right sidebar to "
+"adjust the title, description, and buy button."
+msgstr ""
+"Com o bloco de produtos selecionado, abra a guia Block (Bloco) na barra "
+"lateral direita para ajustar o título, a descrição e o botão de compra."
+
+#: src/Localization/AdminTranslations.php:99
+msgid "Write down your content that you want to link your Amazon product with."
+msgstr "Escreva o conteúdo que você deseja vincular seu produto da Amazon."
+
+#. translators: %s: PHP version
+#: hostinger-affiliate-plugin.php:110
+#, php-format
+msgid "You are running <b>%s</b> PHP version."
+msgstr "Você está executando a versão <b>%s</b> do PHP."
+
+#: src/Localization/AdminTranslations.php:289
+#, fuzzy
+msgid ""
+"You can add this table via the dedicated Block Editor (Gutenberg) block, or "
+"via the shortcode for any other editor, including Elementor."
+msgstr ""
+"Você pode adicionar essa tabela por meio do bloco dedicado do Block Editor "
+"(Gutenberg) ou por meio do shortcode para qualquer outro editor, inclusive o "
+"Elementor."
+
+#: src/Localization/AdminTranslations.php:285
+msgid ""
+"You can add unlimited products, but only 6 can be shown in a published table."
+msgstr ""
+"Você pode adicionar um número ilimitado de produtos, mas somente 6 podem ser "
+"exibidos em uma tabela publicada."
+
+#: src/Localization/AdminTranslations.php:315
+msgid ""
+"You can add your comparison table to any post. Whenever a visitor buys a "
+"product through your affiliate link, you'll earn commission."
+msgstr ""
+"Você pode adicionar sua tabela de comparação a qualquer post. Sempre que um "
+"visitante comprar um produto pelo seu link de afiliado, você receberá uma "
+"comissão."
+
+#: mercado-gutenberg-block/dist/index.js:2
+#, fuzzy
+msgid "You can also edit your product list later from the right-hand menu."
+msgstr ""
+"Você também pode editar sua lista de produtos posteriormente no menu à "
+"direita."
+
+#: src/Localization/AdminTranslations.php:220
+#| msgid ""
+#| "You can also hide products so they don’t appear in the table. Products "
+#| "that you delete will need to be added again."
+msgid ""
+"You can also hide products so they don't appear in the table. Products that "
+"you delete will need to be added again."
+msgstr ""
+"Se quiser, você também pode ocultar produtos na tabela. Caso exclua algum "
+"produto, será necessário adicioná-lo novamente."
+
+#: src/Localization/AdminTranslations.php:217
+msgid ""
+"You can also unpublish your table. Deleting it will cause you to lose all "
+"added products."
+msgstr ""
+"Você também pode cancelar a publicação de sua tabela. Ao excluí-la, você "
+"perderá todos os produtos adicionados."
+
+#: src/Localization/AdminTranslations.php:271
+#: amazon-gutenberg-block/dist/index.js:4
+#: amazon-gutenberg-block/src/views/TableConfiguration.jsx:43
+#: mercado-gutenberg-block/dist/index.js:2
+#: amazon-gutenberg-block/dist/index.js:2825
+msgid "You can edit the existing table configuration after this step"
+msgstr "Você pode editar a configuração da tabela atual após esta etapa"
+
+#: src/Localization/AdminTranslations.php:24
+msgid ""
+"You can select both marketplaces and then easily add affiliate links to your "
+"content."
+msgstr ""
+"Você pode selecionar os dois marketplaces e adicionar facilmente links de "
+"afiliados ao seu conteúdo."
+
+#: src/Localization/AdminTranslations.php:264
+#| msgid "You have added too many products. Only 5 are allowed."
+msgid "You have added too many products to display. Only 6 are allowed."
+msgstr "Você adicionou muitos produtos. Apenas 5 são permitidos."
+
+#: src/Localization/AdminTranslations.php:159
+msgid "You have unsaved changes that will be lost if you leave."
+msgstr "Há alterações que não foram salvas. Tem certeza de que deseja sair?"
+
+#: src/Setup/Blocks.php:253
+#, fuzzy
+msgid "You need to add at least 2 products."
+msgstr "Você precisa adicionar pelo menos dois produtos."
+
+#: src/Localization/AdminTranslations.php:268
+msgid ""
+"You need to add at least one row (title, select) to create a table. Check if "
+"all fields are filled."
+msgstr ""
+"Você precisa adicionar pelo menos uma linha (título, seleção) para criar uma "
+"tabela. Verifique se todos os campos estão preenchidos."
+
+#: src/Localization/AdminTranslations.php:274
+#| msgid ""
+#| "You need to add at least one row, two enabled products to save changes. "
+#| "Check if all added fields are filled."
+msgid ""
+"You need to add at least one row, two enabled products (max 5 products) to "
+"save changes. Check if all added fields are filled."
+msgstr ""
+"Você precisa adicionar pelo menos uma linha e dois produtos habilitados para "
+"salvar as alterações. Confira se todos os campos adicionados estão "
+"preenchidos."
+
+#: src/Localization/AdminTranslations.php:171
+msgid ""
+"You need to choose the main layout for your product(s) block based on your "
+"needs. You can choose between single product, multiple product, or "
+"comparison."
+msgstr ""
+"É necessário escolher o layout principal do(s) seu(s) bloco(s) de produto(s) "
+"com base nas suas necessidades. Você pode escolher entre um produto único, "
+"vários produtos ou uma comparação."
+
+#: src/Localization/AdminTranslations.php:261
+msgid "You need to enter table name."
+msgstr "Você precisa inserir o nome da tabela."
+
+#: src/Localization/AdminTranslations.php:123
+msgid "Your comparison tables"
+msgstr "Suas tabelas de comparação"
+
+#: src/Localization/AdminTranslations.php:182
+msgid "Your tables"
+msgstr "Suas tabelas"

@@ -1,0 +1,61 @@
+.repeater-container {
+  .repeater-item {
+    @apply flex;
+
+    &.cloner {
+      @apply hidden;
+    }
+  }
+
+  .message {
+    @apply flex flex-grow;
+  }
+
+  .controls {
+    @apply flex-shrink-0 mt-5 ml-4 flex pt-4;
+  }
+
+  .control-button {
+    @apply flex-shrink-0 cursor-pointer rounded-full w-6 h-6 opacity-50 duration-300;
+
+    &:hover {
+      @apply opacity-100;
+    }
+
+    .control-button-icon {
+      @apply relative w-full h-full;
+
+      &::before,
+      &::after {
+        @apply bg-white-100 absolute;
+
+        content: '';
+        width: 14px;
+        height: 2px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &::after {
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+    }
+  }
+
+  .add-button {
+    @apply bg-green-100;
+  }
+
+  .delete-button {
+    @apply bg-red-200;
+
+    .control-button-icon::after {
+      content: none;
+    }
+  }
+
+  .placeholder-button {
+    @apply cursor-default;
+  }
+}

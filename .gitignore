@@ -35,3 +35,7 @@ Thumbs.db
 
 # Node packages (if any are introduced)
 node_modules/
+
+# Local databases and backups
+db/
+*.sql

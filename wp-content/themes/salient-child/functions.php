@@ -26,7 +26,11 @@ add_action( 'wp_ajax_nopriv_ulb_geolocate_user', 'ulb_geolocate_user_callback' )
 
 function ulb_geolocate_user_callback() {
     $country = '';
-    if ( class_exists( 'WC_Geolocation' ) ) {
+    
+    // Local testing override: Force 'IN' (India) on local servers to allow direct verification
+    if ( isset( $_SERVER['HTTP_HOST'] ) && ( $_SERVER['HTTP_HOST'] === 'localhost' || $_SERVER['HTTP_HOST'] === '127.0.0.1' ) ) {
+        $country = 'IN';
+    } elseif ( class_exists( 'WC_Geolocation' ) ) {
         $location = WC_Geolocation::geolocate_ip();
         $country = isset( $location['country'] ) ? $location['country'] : '';
     }

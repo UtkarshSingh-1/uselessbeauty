@@ -590,8 +590,38 @@ function ulb_klaviyo_frontend_identify() {
  */
 add_filter( 'kl_started_checkout', 'ulb_klaviyo_started_checkout_region', 10, 2 );
 function ulb_klaviyo_started_checkout_region( $event_data, $cart ) {
-    $event_data['Store Region'] = ulb_is_india_region() ? 'India' : 'Global';
-    $event_data['Store Region Code'] = ulb_is_india_region() ? 'IN' : 'GL';
+    $is_in = ulb_is_india_region();
+    $event_data['Store Region'] = $is_in ? 'India' : 'Global';
+    $event_data['Store Region Code'] = $is_in ? 'IN' : 'GL';
+    
+    if ( $is_in ) {
+        $rate = ulb_get_aed_to_inr_rate();
+        if ( $rate > 0 ) {
+            $event_data['Currency'] = 'AED';
+            $event_data['CurrencySymbol'] = 'AED';
+            if ( isset( $event_data['$value'] ) ) {
+                $event_data['$value'] = round( floatval( $event_data['$value'] ) / $rate, 2 );
+            }
+            if ( isset( $event_data['$extra'] ) ) {
+                $monetary_keys = array( 'SubTotal', 'ShippingTotal', 'TaxTotal', 'GrandTotal' );
+                foreach ( $monetary_keys as $key ) {
+                    if ( isset( $event_data['$extra'][$key] ) ) {
+                        $event_data['$extra'][$key] = round( floatval( $event_data['$extra'][$key] ) / $rate, 2 );
+                    }
+                }
+                if ( isset( $event_data['$extra']['Items'] ) && is_array( $event_data['$extra']['Items'] ) ) {
+                    foreach ( $event_data['$extra']['Items'] as $idx => $item ) {
+                        $item_monetary_keys = array( 'SubTotal', 'Total', 'LineTotal', 'Tax', 'TotalWithTax' );
+                        foreach ( $item_monetary_keys as $key ) {
+                            if ( isset( $item[$key] ) ) {
+                                $event_data['$extra']['Items'][$idx][$key] = round( floatval( $item[$key] ) / $rate, 2 );
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     return $event_data;
 }
 
@@ -600,8 +630,39 @@ function ulb_klaviyo_started_checkout_region( $event_data, $cart ) {
  */
 add_filter( 'kl_added_to_cart', 'ulb_klaviyo_added_to_cart_region', 10, 4 );
 function ulb_klaviyo_added_to_cart_region( $added_to_cart, $added_product, $quantity, $wck_cart ) {
-    $added_to_cart['Store Region'] = ulb_is_india_region() ? 'India' : 'Global';
-    $added_to_cart['Store Region Code'] = ulb_is_india_region() ? 'IN' : 'GL';
+    $is_in = ulb_is_india_region();
+    $added_to_cart['Store Region'] = $is_in ? 'India' : 'Global';
+    $added_to_cart['Store Region Code'] = $is_in ? 'IN' : 'GL';
+    
+    if ( $is_in ) {
+        $rate = ulb_get_aed_to_inr_rate();
+        if ( $rate > 0 ) {
+            if ( isset( $added_to_cart['value'] ) ) {
+                $added_to_cart['value'] = round( floatval( $added_to_cart['value'] ) / $rate, 2 );
+            }
+            if ( isset( $added_to_cart['AddedItemPrice'] ) ) {
+                $added_to_cart['AddedItemPrice'] = round( floatval( $added_to_cart['AddedItemPrice'] ) / $rate, 2 );
+            }
+            if ( isset( $added_to_cart['extra'] ) ) {
+                $monetary_keys = array( 'SubTotal', 'ShippingTotal', 'TaxTotal', 'GrandTotal' );
+                foreach ( $monetary_keys as $key ) {
+                    if ( isset( $added_to_cart['extra'][$key] ) ) {
+                        $added_to_cart['extra'][$key] = round( floatval( $added_to_cart['extra'][$key] ) / $rate, 2 );
+                    }
+                }
+                if ( isset( $added_to_cart['extra']['Items'] ) && is_array( $added_to_cart['extra']['Items'] ) ) {
+                    foreach ( $added_to_cart['extra']['Items'] as $idx => $item ) {
+                        $item_monetary_keys = array( 'SubTotal', 'Total', 'LineTotal', 'Tax', 'TotalWithTax' );
+                        foreach ( $item_monetary_keys as $key ) {
+                            if ( isset( $item[$key] ) ) {
+                                $added_to_cart['extra']['Items'][$idx][$key] = round( floatval( $item[$key] ) / $rate, 2 );
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     return $added_to_cart;
 }
 
@@ -715,11 +776,65 @@ function ulb_convert_analytics_product_lookup_to_base_currency( $order_item_id, 
 }
 
 /**
- * One-time backfill of regional metadata and conversion of existing analytics stats for INR orders.
+ * Convert INR coupon discount values to base currency (AED) after saving to WooCommerce Analytics coupon lookup database.
+ */
+add_action( 'woocommerce_analytics_update_coupon', 'ulb_convert_analytics_coupon_lookup_to_base_currency', 10, 2 );
+function ulb_convert_analytics_coupon_lookup_to_base_currency( $coupon_id, $order_id ) {
+    $order = wc_get_order( $order_id );
+    if ( ! $order ) {
+        return;
+    }
+
+    if ( 'INR' === $order->get_currency() ) {
+        $rate = ulb_get_aed_to_inr_rate();
+        if ( $rate > 0 ) {
+            global $wpdb;
+            $table_name = $wpdb->prefix . 'wc_order_coupon_lookup';
+            
+            $wpdb->query( $wpdb->prepare(
+                "UPDATE {$table_name} 
+                 SET discount_amount = ROUND(discount_amount / %f, 2)
+                 WHERE order_id = %d AND coupon_id = %d",
+                $rate, $order_id, $coupon_id
+            ) );
+        }
+    }
+}
+
+/**
+ * Convert INR tax values to base currency (AED) after saving to WooCommerce Analytics tax lookup database.
+ */
+add_action( 'woocommerce_analytics_update_tax', 'ulb_convert_analytics_tax_lookup_to_base_currency', 10, 2 );
+function ulb_convert_analytics_tax_lookup_to_base_currency( $tax_rate_id, $order_id ) {
+    $order = wc_get_order( $order_id );
+    if ( ! $order ) {
+        return;
+    }
+
+    if ( 'INR' === $order->get_currency() ) {
+        $rate = ulb_get_aed_to_inr_rate();
+        if ( $rate > 0 ) {
+            global $wpdb;
+            $table_name = $wpdb->prefix . 'wc_order_tax_lookup';
+            
+            $wpdb->query( $wpdb->prepare(
+                "UPDATE {$table_name} 
+                 SET shipping_tax = ROUND(shipping_tax / %f, 2),
+                     order_tax = ROUND(order_tax / %f, 2),
+                     total_tax = ROUND(total_tax / %f, 2)
+                 WHERE order_id = %d AND tax_rate_id = %d",
+                $rate, $rate, $rate, $order_id, $tax_rate_id
+            ) );
+        }
+    }
+}
+
+/**
+ * One-time backfill of regional metadata and conversion of existing analytics stats for INR orders (v3 covers coupons and taxes).
  */
 add_action( 'admin_init', 'ulb_backfill_order_regions' );
 function ulb_backfill_order_regions() {
-    if ( get_option( 'ulb_region_backfill_done_v2' ) ) {
+    if ( get_option( 'ulb_region_backfill_done_v3' ) ) {
         return;
     }
 
@@ -741,7 +856,7 @@ function ulb_backfill_order_regions() {
         }
     }
 
-    // 2. Convert existing INR orders in wc_order_stats and wc_order_product_lookup to AED
+    // 2. Convert existing INR orders in wc_order_stats, wc_order_product_lookup, wc_order_coupon_lookup, and wc_order_tax_lookup to AED
     $inr_orders = wc_get_orders( array(
         'limit'    => -1,
         'currency' => 'INR',
@@ -775,6 +890,24 @@ function ulb_backfill_order_regions() {
                  WHERE order_id = %d AND product_gross_revenue > 100",
                 $rate, $rate, $rate, $rate, $rate, $rate, $order_id
             ) );
+
+            // Update wc_order_coupon_lookup
+            $wpdb->query( $wpdb->prepare(
+                "UPDATE {$wpdb->prefix}wc_order_coupon_lookup 
+                 SET discount_amount = ROUND(discount_amount / %f, 2)
+                 WHERE order_id = %d AND discount_amount > 10",
+                $rate, $order_id
+            ) );
+
+            // Update wc_order_tax_lookup
+            $wpdb->query( $wpdb->prepare(
+                "UPDATE {$wpdb->prefix}wc_order_tax_lookup 
+                 SET shipping_tax = ROUND(shipping_tax / %f, 2),
+                     order_tax = ROUND(order_tax / %f, 2),
+                     total_tax = ROUND(total_tax / %f, 2)
+                 WHERE order_id = %d AND total_tax > 5",
+                $rate, $rate, $rate, $order_id
+            ) );
         }
     }
 
@@ -783,7 +916,7 @@ function ulb_backfill_order_regions() {
         \Automattic\WooCommerce\Admin\API\Reports\Cache::invalidate();
     }
 
-    update_option( 'ulb_region_backfill_done_v2', '1' );
+    update_option( 'ulb_region_backfill_done_v3', '1' );
 }
 
 /**
@@ -857,6 +990,280 @@ function ulb_filter_orders_by_region_hpos( $query_args ) {
     }
     return $query_args;
 }
+
+
+/**
+ * --------------------------------------------------------------------------
+ * Store Region Analytics Filtering and Display Controls
+ * --------------------------------------------------------------------------
+ */
+
+/**
+ * Retrieve the active analytics region selected by the administrator.
+ *
+ * @return string 'IN', 'GL', or '' for All Regions.
+ */
+function ulb_get_active_analytics_region() {
+    if ( isset( $_COOKIE['ulb_analytics_region'] ) && in_array( $_COOKIE['ulb_analytics_region'], array( 'IN', 'GL' ), true ) ) {
+        return $_COOKIE['ulb_analytics_region'];
+    }
+    return '';
+}
+
+/**
+ * Switch WooCommerce currency to INR in WP Admin if India Store Analytics is selected.
+ */
+add_filter( 'woocommerce_currency', 'ulb_set_admin_analytics_currency', 9999 );
+function ulb_set_admin_analytics_currency( $currency ) {
+    if ( is_admin() && ulb_get_active_analytics_region() === 'IN' ) {
+        return 'INR';
+    }
+    return $currency;
+}
+
+/**
+ * Add custom "Store Region" selector to WP Admin Bar.
+ */
+add_action( 'admin_bar_menu', 'ulb_add_analytics_region_selector', 999 );
+function ulb_add_analytics_region_selector( $wp_admin_bar ) {
+    if ( ! is_admin() || ! current_user_can( 'manage_woocommerce' ) ) {
+        return;
+    }
+
+    $active_region = ulb_get_active_analytics_region();
+    $region_labels = array(
+        ''   => 'All Regions (AED)',
+        'IN' => 'India Store (INR)',
+        'GL' => 'Global Store (AED)',
+    );
+    $active_label = isset( $region_labels[$active_region] ) ? $region_labels[$active_region] : 'All Regions';
+
+    $wp_admin_bar->add_node( array(
+        'id'    => 'ulb-region-selector',
+        'title' => '<span class="ab-icon dashicons dashicons-translation"></span> Region: ' . $active_label,
+        'href'  => '#',
+    ) );
+
+    foreach ( $region_labels as $code => $label ) {
+        $url = add_query_arg( 'ulb_set_analytics_region', $code === '' ? 'all' : $code );
+        $wp_admin_bar->add_node( array(
+            'parent' => 'ulb-region-selector',
+            'id'     => 'ulb-region-' . ( $code === '' ? 'all' : strtolower( $code ) ),
+            'title'  => $label,
+            'href'   => $url,
+            'meta'   => array(
+                'class' => ( $active_region === $code ) ? 'ulb-active-region' : '',
+            ),
+        ) );
+    }
+}
+
+/**
+ * Handle admin bar Store Region switches.
+ */
+add_action( 'admin_init', 'ulb_handle_analytics_region_switch' );
+function ulb_handle_analytics_region_switch() {
+    if ( is_admin() && isset( $_GET['ulb_set_analytics_region'] ) && current_user_can( 'manage_woocommerce' ) ) {
+        $region = sanitize_text_field( $_GET['ulb_set_analytics_region'] );
+        if ( $region === 'all' ) {
+            setcookie( 'ulb_analytics_region', '', time() - 3600, COOKIEPATH, COOKIE_DOMAIN );
+            $_COOKIE['ulb_analytics_region'] = '';
+        } elseif ( in_array( $region, array( 'IN', 'GL' ), true ) ) {
+            setcookie( 'ulb_analytics_region', $region, time() + ( 30 * DAY_IN_SECONDS ), COOKIEPATH, COOKIE_DOMAIN );
+            $_COOKIE['ulb_analytics_region'] = $region;
+        }
+
+        // Clear WooCommerce reports cache
+        if ( class_exists( 'Automattic\WooCommerce\Admin\API\Reports\Cache' ) ) {
+            \Automattic\WooCommerce\Admin\API\Reports\Cache::invalidate();
+        }
+
+        // Redirect back
+        $redirect = remove_query_arg( 'ulb_set_analytics_region' );
+        wp_safe_redirect( $redirect );
+        exit;
+    }
+}
+
+/**
+ * Join metadata table to WooCommerce Analytics report queries to allow filtering by store region.
+ */
+add_filter( 'woocommerce_analytics_clauses_join', 'ulb_analytics_filter_by_region_join', 10, 2 );
+function ulb_analytics_filter_by_region_join( $clauses, $context ) {
+    $selected_region = ulb_get_active_analytics_region();
+    if ( empty( $selected_region ) ) {
+        return $clauses;
+    }
+
+    global $wpdb;
+    $supported_contexts = array(
+        'orders_stats'     => $wpdb->prefix . 'wc_order_stats',
+        'orders'           => $wpdb->prefix . 'wc_order_stats',
+        'products_stats'   => $wpdb->prefix . 'wc_order_product_lookup',
+        'products'         => $wpdb->prefix . 'wc_order_product_lookup',
+        'coupons_stats'    => $wpdb->prefix . 'wc_order_coupon_lookup',
+        'coupons'          => $wpdb->prefix . 'wc_order_coupon_lookup',
+        'taxes_stats'      => $wpdb->prefix . 'wc_order_tax_lookup',
+        'taxes'            => $wpdb->prefix . 'wc_order_tax_lookup',
+        'variations_stats' => $wpdb->prefix . 'wc_order_product_lookup',
+        'variations'       => $wpdb->prefix . 'wc_order_product_lookup',
+        'categories'       => $wpdb->prefix . 'wc_order_product_lookup',
+        'downloads'        => $wpdb->prefix . 'wc_order_download_lookup',
+        'downloads_stats'  => $wpdb->prefix . 'wc_order_download_lookup',
+        'customers'        => $wpdb->prefix . 'wc_order_stats',
+        'customers_stats'  => $wpdb->prefix . 'wc_order_stats',
+    );
+
+    if ( ! isset( $supported_contexts[$context] ) ) {
+        return $clauses;
+    }
+
+    $base_table = $supported_contexts[$context];
+    
+    // Check if HPOS is active
+    $is_hpos = false;
+    if ( class_exists( '\Automattic\WooCommerce\Utilities\OrderUtil' ) ) {
+        $is_hpos = \Automattic\WooCommerce\Utilities\OrderUtil::custom_orders_table_usage_is_enabled();
+    }
+    
+    $meta_table = $is_hpos ? "{$wpdb->prefix}wc_orders_meta" : "{$wpdb->postmeta}";
+    $order_id_col = $is_hpos ? "order_id" : "post_id";
+
+    // For customers report, we join on the order stats table since the base table wc_customer_lookup doesn't have order_id
+    if ( $context === 'customers' || $context === 'customers_stats' ) {
+        $clauses[] = "JOIN {$meta_table} AS ulb_analytics_meta ON ulb_analytics_meta.{$order_id_col} = {$wpdb->prefix}wc_order_stats.order_id";
+    } else {
+        $clauses[] = "JOIN {$meta_table} AS ulb_analytics_meta ON ulb_analytics_meta.{$order_id_col} = {$base_table}.order_id";
+    }
+
+    return $clauses;
+}
+
+/**
+ * Filter WooCommerce Analytics report queries to only show orders from the selected region.
+ */
+add_filter( 'woocommerce_analytics_clauses_where', 'ulb_analytics_filter_by_region_where', 10, 2 );
+function ulb_analytics_filter_by_region_where( $clauses, $context ) {
+    $selected_region = ulb_get_active_analytics_region();
+    if ( empty( $selected_region ) ) {
+        return $clauses;
+    }
+
+    global $wpdb;
+    $supported_contexts = array(
+        'orders_stats', 'orders', 'products_stats', 'products', 
+        'coupons_stats', 'coupons', 'taxes_stats', 'taxes', 
+        'variations_stats', 'variations', 'categories',
+        'downloads', 'downloads_stats', 'customers', 'customers_stats'
+    );
+
+    if ( ! in_array( $context, $supported_contexts, true ) ) {
+        return $clauses;
+    }
+
+    $clauses[] = "AND ulb_analytics_meta.meta_key = '_ulb_region' AND ulb_analytics_meta.meta_value = '" . esc_sql( $selected_region ) . "'";
+
+    return $clauses;
+}
+
+/**
+ * Multiply normalized AED analytics values by exchange rate in SELECT clause when India region is active.
+ */
+add_filter( 'woocommerce_analytics_clauses_select', 'ulb_analytics_convert_select_to_inr', 10, 2 );
+function ulb_analytics_convert_select_to_inr( $clauses, $context ) {
+    $selected_region = ulb_get_active_analytics_region();
+    if ( $selected_region !== 'IN' ) {
+        return $clauses;
+    }
+
+    $rate = ulb_get_aed_to_inr_rate();
+    if ( $rate <= 0 ) {
+        return $clauses;
+    }
+
+    global $wpdb;
+
+    // List of monetary fields in WooCommerce Analytics lookup tables
+    $monetary_fields = array(
+        'total_sales',
+        'tax_total',
+        'shipping_total',
+        'net_total',
+        'product_net_revenue',
+        'coupon_amount',
+        'tax_amount',
+        'shipping_amount',
+        'shipping_tax_amount',
+        'product_gross_revenue',
+        'discount_amount',
+        'shipping_tax',
+        'order_tax',
+        'total_tax',
+        'amount',
+        'total_spend',
+        'avg_order_value',
+        'avg_total_spend',
+        'avg_avg_order_value'
+    );
+
+    // Build matching regex for these fields
+    $fields_pattern = implode( '|', array_map( 'preg_quote', $monetary_fields ) );
+    $regex = '/(?:([a-zA-Z0-9_]+)\.)?\b(' . $fields_pattern . ')\b/';
+
+    foreach ( $clauses as $key => $clause ) {
+        // Split by ' AS ' (case insensitive) to avoid modifying alias names
+        $parts = preg_split( '/\s+as\s+/i', $clause );
+        $expr = $parts[0];
+
+        $expr = preg_replace_callback(
+            $regex,
+            function ( $matches ) use ( $rate ) {
+                $table = ! empty( $matches[1] ) ? $matches[1] . '.' : '';
+                $field = $matches[2];
+                return '(' . $table . $field . ' * ' . $rate . ')';
+            },
+            $expr
+        );
+
+        // Reconstruct the clause with its alias if it had one
+        if ( count( $parts ) > 1 ) {
+            $clauses[$key] = $expr . ' AS ' . $parts[1];
+        } else {
+            $clauses[$key] = $expr;
+        }
+    }
+
+    return $clauses;
+}
+
+/**
+ * Inject regional metadata into WooCommerce REST API order responses for Klaviyo.
+ */
+add_filter( 'woocommerce_rest_prepare_shop_order_object', 'ulb_add_region_to_rest_api_order', 10, 3 );
+function ulb_add_region_to_rest_api_order( $response, $order, $request ) {
+    $data = $response->get_data();
+    
+    // Get region from order meta
+    $region_code = $order->get_meta( '_ulb_region' );
+    if ( empty( $region_code ) ) {
+        $region_code = $order->get_meta( 'ulb_region' );
+    }
+    
+    if ( empty( $region_code ) ) {
+        // Fallback: if currency is INR, it's likely India Store
+        $region_code = ( $order->get_currency() === 'INR' ) ? 'IN' : 'GL';
+    }
+    
+    $region_label = ( $region_code === 'IN' ) ? 'India' : 'Global';
+    
+    // Inject at the root level of the REST API response
+    $data['store_region'] = $region_label;
+    $data['store_region_code'] = $region_code;
+    
+    $response->set_data( $data );
+    return $response;
+}
+
 
 
 

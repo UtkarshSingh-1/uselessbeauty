@@ -667,11 +667,10 @@ function ulb_convert_analytics_order_stats_to_base_currency( $data, $order ) {
         $rate = ulb_get_aed_to_inr_rate();
         if ( $rate > 0 ) {
             $monetary_fields = array(
-                'gross_sales',
                 'total_sales',
                 'tax_total',
                 'shipping_total',
-                'net_sales',
+                'net_total',
             );
 
             foreach ( $monetary_fields as $field ) {
@@ -756,13 +755,12 @@ function ulb_backfill_order_regions() {
             // Update wc_order_stats
             $wpdb->query( $wpdb->prepare(
                 "UPDATE {$wpdb->prefix}wc_order_stats 
-                 SET gross_sales = ROUND(gross_sales / %f, 2),
-                     total_sales = ROUND(total_sales / %f, 2),
+                 SET total_sales = ROUND(total_sales / %f, 2),
                      tax_total = ROUND(tax_total / %f, 2),
                      shipping_total = ROUND(shipping_total / %f, 2),
-                     net_sales = ROUND(net_sales / %f, 2)
-                 WHERE order_id = %d AND gross_sales > 100",
-                $rate, $rate, $rate, $rate, $rate, $order_id
+                     net_total = ROUND(net_total / %f, 2)
+                 WHERE order_id = %d AND total_sales > 100",
+                $rate, $rate, $rate, $rate, $order_id
             ) );
 
             // Update wc_order_product_lookup

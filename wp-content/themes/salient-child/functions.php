@@ -15,18 +15,29 @@ if ( ! defined( 'ULB_IS_INDIA_REGION' ) ) {
         }
     }
 
-    // Fallback 1: Check HTTP Referer (highly reliable for AJAX, add-to-cart, and fragment refreshes)
-    if ( ! $is_in && isset( $_SERVER['HTTP_REFERER'] ) ) {
-        $referer_path = parse_url( $_SERVER['HTTP_REFERER'], PHP_URL_PATH );
-        if ( $referer_path && preg_match( '/^\/in(\/|\?|$)/', $referer_path ) ) {
-            $is_in = true;
-        }
+    // Skip region classification based on referer/cookie for Nextend Social Login requests
+    $is_social = false;
+    if ( isset( $_GET['loginSocial'] ) || isset( $_POST['loginSocial'] ) || isset( $_REQUEST['loginSocial'] ) ) {
+        $is_social = true;
+    }
+    if ( isset( $_SERVER['REQUEST_URI'] ) && strpos( $_SERVER['REQUEST_URI'], 'nextend-social-login' ) !== false ) {
+        $is_social = true;
     }
 
-    // Fallback 2: Check cookie (for AJAX/REST requests only to avoid affecting direct URL browsing)
-    $is_ajax = ( defined( 'DOING_AJAX' ) && DOING_AJAX ) || ( defined( 'REST_REQUEST' ) && REST_REQUEST ) || isset( $_GET['wc-ajax'] );
-    if ( ! $is_in && $is_ajax && isset( $_COOKIE['ulb_region'] ) && $_COOKIE['ulb_region'] === 'IN' ) {
-        $is_in = true;
+    if ( ! $is_social ) {
+        // Fallback 1: Check HTTP Referer (highly reliable for AJAX, add-to-cart, and fragment refreshes)
+        if ( ! $is_in && isset( $_SERVER['HTTP_REFERER'] ) ) {
+            $referer_path = parse_url( $_SERVER['HTTP_REFERER'], PHP_URL_PATH );
+            if ( $referer_path && preg_match( '/^\/in(\/|\?|$)/', $referer_path ) ) {
+                $is_in = true;
+            }
+        }
+
+        // Fallback 2: Check cookie (for AJAX/REST requests only to avoid affecting direct URL browsing)
+        $is_ajax = ( defined( 'DOING_AJAX' ) && DOING_AJAX ) || ( defined( 'REST_REQUEST' ) && REST_REQUEST ) || isset( $_GET['wc-ajax'] );
+        if ( ! $is_in && $is_ajax && isset( $_COOKIE['ulb_region'] ) && $_COOKIE['ulb_region'] === 'IN' ) {
+            $is_in = true;
+        }
     }
 
     define( 'ULB_IS_INDIA_REGION', $is_in );
@@ -439,6 +450,26 @@ function ulb_filter_shipping_rates_by_region( $rates, $package ) {
  */
 add_filter( 'home_url', 'ulb_filter_home_url', 9999, 4 );
 function ulb_filter_home_url( $url, $path, $orig_scheme, $blog_id ) {
+    // Avoid prepending /in for Nextend Social Login callback or login URLs
+    if ( strpos( $url, 'loginSocial' ) !== false || strpos( $url, 'nextend-social-login' ) !== false ) {
+        return $url;
+    }
+    if ( ! empty( $path ) && ( strpos( $path, 'loginSocial' ) !== false || strpos( $path, 'nextend-social-login' ) !== false ) ) {
+        return $url;
+    }
+    
+    // Prevent prepending /in for any URL generation during a social login request
+    $is_social = false;
+    if ( isset( $_GET['loginSocial'] ) || isset( $_POST['loginSocial'] ) || isset( $_REQUEST['loginSocial'] ) ) {
+        $is_social = true;
+    }
+    if ( isset( $_SERVER['REQUEST_URI'] ) && strpos( $_SERVER['REQUEST_URI'], 'nextend-social-login' ) !== false ) {
+        $is_social = true;
+    }
+    if ( $is_social ) {
+        return $url;
+    }
+
     if ( ulb_is_india_region() ) {
         if ( empty( $path ) || ! preg_match( '/^(wp-admin|wp-login|wp-content|wp-includes|wp-json|admin-ajax)/', ltrim( $path, '/' ) ) ) {
             $parsed = parse_url( $url );

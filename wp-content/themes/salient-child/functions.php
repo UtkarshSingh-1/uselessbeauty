@@ -1308,4 +1308,22 @@ function ulb_body_class_region( $classes ) {
     return $classes;
 }
 
+/**
+ * Dynamically filter the Salient theme's announcement bar settings by region.
+ */
+add_filter( 'option_salient_options', 'ulb_regional_announcement_bar' );
+function ulb_regional_announcement_bar( $options ) {
+    if ( is_admin() || ! is_array( $options ) ) {
+        return $options;
+    }
+
+    if ( ulb_is_india_region() ) {
+        // Change the text for India Store (You can update this string whenever you change the active coupon)
+        $options['header-announcement-bar-text'] = 'Use coupon ACTIVE15 for 15% off your order!';
+        // Enable it for India Store
+        $options['header-announcement-bar'] = '1';
+    }
+    
+    return $options;
+}
 

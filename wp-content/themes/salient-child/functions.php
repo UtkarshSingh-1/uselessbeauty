@@ -1295,8 +1295,17 @@ function ulb_add_region_to_rest_api_order( $response, $order, $request ) {
     return $response;
 }
 
-
-
-
+/**
+ * Add custom body classes for region targeting.
+ */
+add_filter( 'body_class', 'ulb_body_class_region' );
+function ulb_body_class_region( $classes ) {
+    if ( ulb_is_india_region() ) {
+        $classes[] = 'ulb-india-region';
+    } else {
+        $classes[] = 'ulb-global-region';
+    }
+    return $classes;
+}
 
 

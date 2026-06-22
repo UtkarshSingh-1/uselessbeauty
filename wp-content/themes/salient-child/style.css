@@ -164,9 +164,15 @@ Version: 1.0
 body.woocommerce-account #customer_login div[class*="u-column"].visible {
     display: block;
 }
-
-
-
-
-
-
+/* --- Hide Existing Coupon Banner/Announcement Bar on India Region --- */
+body.ulb-india-region #promo-section,
+body.ulb-india-region .nectar-announcement-bar,
+body.ulb-india-region #announcement-bar,
+body.ulb-india-region .announcement-bar,
+body.ulb-india-region .wt-sc-promo-banner-wrap,
+body.ulb-india-region .wt-sc-floating-widget,
+body.ulb-india-region .wcusage-banner,
+body.ulb-india-region .woocommerce-store-notice,
+body.ulb-india-region p.demo_store {
+    display: none !important;
+}

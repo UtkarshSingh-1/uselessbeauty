@@ -541,15 +541,25 @@ function ulb_add_coupon_region_restriction_field() {
         'description' => __( 'Choose which store region this coupon can be used in.', 'woocommerce' ),
         'desc_tip'    => true,
     ) );
+
+    woocommerce_wp_checkbox( array(
+        'id'          => '_show_in_header_banner',
+        'label'       => __( 'Show in Header Banner', 'woocommerce' ),
+        'description' => __( 'Feature this coupon in the header announcement bar when its region is active.', 'woocommerce' ),
+    ) );
 }
 
 /**
- * Save Region Restriction field when a coupon is saved.
+ * Save Region Restriction and Header Banner fields when a coupon is saved.
  */
 add_action( 'woocommerce_coupon_options_save', 'ulb_save_coupon_region_restriction_field', 10, 2 );
 function ulb_save_coupon_region_restriction_field( $coupon_id, $coupon ) {
     $restriction = isset( $_POST['_coupon_region_restriction'] ) ? sanitize_text_field( $_POST['_coupon_region_restriction'] ) : 'all';
     $coupon->update_meta_data( '_coupon_region_restriction', $restriction );
+
+    $show_banner = isset( $_POST['_show_in_header_banner'] ) ? 'yes' : 'no';
+    $coupon->update_meta_data( '_show_in_header_banner', $show_banner );
+
     $coupon->save();
 }
 
@@ -1317,13 +1327,183 @@ function ulb_regional_announcement_bar( $options ) {
         return $options;
     }
 
-    if ( ulb_is_india_region() ) {
-        // Change the text for India Store (You can update this string whenever you change the active coupon)
-        $options['header-announcement-bar-text'] = 'Use coupon ACTIVE15 for 15% off your order!';
-        // Enable it for India Store
-        $options['header-announcement-bar'] = '1';
+    $is_india = ulb_is_india_region();
+    $target_region = $is_india ? 'india' : 'global';
+
+    // Query coupons with _show_in_header_banner = 'yes'
+    $args = array(
+        'post_type'      => 'shop_coupon',
+        'post_status'    => 'publish',
+        'posts_per_page' => -1,
+        'meta_query'     => array(
+            'relation' => 'AND',
+            array(
+                'key'     => '_show_in_header_banner',
+                'value'   => 'yes',
+                'compare' => '=',
+            ),
+        ),
+    );
+
+    $coupons = get_posts( $args );
+    $featured_coupon = null;
+
+    if ( ! empty( $coupons ) ) {
+        foreach ( $coupons as $coupon_post ) {
+            $coupon = new WC_Coupon( $coupon_post->ID );
+            $region = $coupon->get_meta( '_coupon_region_restriction' );
+
+            if ( empty( $region ) ) {
+                $region = 'all';
+            }
+
+            // Match region restriction
+            if ( $region === 'all' || $region === $target_region ) {
+                $featured_coupon = $coupon;
+                break; // Take the latest published/matching coupon
+            }
+        }
     }
-    
+
+    if ( $featured_coupon ) {
+        $code = strtoupper( $featured_coupon->get_code() );
+        $description = $featured_coupon->get_description();
+        $discount_type = $featured_coupon->get_discount_type();
+        $amount = $featured_coupon->get_amount();
+
+        if ( ! empty( $description ) ) {
+            $banner_text = sprintf( '%s - Use code: <strong>%s</strong>', esc_html( $description ), esc_html( $code ) );
+        } else {
+            // Format discount type string dynamically
+            $discount_str = '';
+            if ( strpos( $discount_type, 'percent' ) !== false ) {
+                $discount_str = $amount . '%';
+            } else {
+                $currency_symbol = $is_india ? '₹' : 'AED ';
+                $discount_str = $currency_symbol . $amount;
+            }
+            $banner_text = sprintf( 'Use code <strong>%s</strong> to get %s off your order!', esc_html( $code ), esc_html( $discount_str ) );
+        }
+
+        $options['header-announcement-bar-text'] = $banner_text;
+        $options['header-announcement-bar'] = '1';
+    } else {
+        // If no featured coupon is active for this region, disable the announcement bar
+        $options['header-announcement-bar'] = '0';
+    }
+
     return $options;
+}
+
+/**
+ * Register custom columns on the WooCommerce Coupons list table.
+ */
+add_filter( 'manage_edit-shop_coupon_columns', 'ulb_coupon_list_columns' );
+function ulb_coupon_list_columns( $columns ) {
+    $columns['coupon_region'] = __( 'Region Restriction', 'woocommerce' );
+    $columns['show_in_banner'] = __( 'Show in Header Banner', 'woocommerce' );
+    return $columns;
+}
+
+/**
+ * Output data for custom columns on the WooCommerce Coupons list table.
+ */
+add_action( 'manage_shop_coupon_posts_custom_column', 'ulb_coupon_columns_data', 10, 2 );
+function ulb_coupon_columns_data( $column, $post_id ) {
+    if ( $column === 'coupon_region' ) {
+        $coupon = new WC_Coupon( $post_id );
+        $region = $coupon->get_meta( '_coupon_region_restriction' );
+        
+        $region_labels = array(
+            'all'    => 'All Regions',
+            'global' => 'Global / UAE Store',
+            'india'  => 'India Store',
+        );
+        
+        $label = isset( $region_labels[$region] ) ? $region_labels[$region] : 'All Regions';
+        
+        if ( $region === 'india' ) {
+            echo '<span class="badge-region badge-india" style="background:#e0f2fe;color:#0369a1;padding:4px 8px;border-radius:12px;font-weight:600;font-size:11px;">🇮🇳 ' . esc_html( $label ) . '</span>';
+        } elseif ( $region === 'global' ) {
+            echo '<span class="badge-region badge-global" style="background:#fef3c7;color:#b45309;padding:4px 8px;border-radius:12px;font-weight:600;font-size:11px;">🌍 ' . esc_html( $label ) . '</span>';
+        } else {
+            echo '<span class="badge-region badge-all" style="background:#f1f5f9;color:#475569;padding:4px 8px;border-radius:12px;font-weight:600;font-size:11px;">🌐 ' . esc_html( $label ) . '</span>';
+        }
+    }
+
+    if ( $column === 'show_in_banner' ) {
+        $coupon = new WC_Coupon( $post_id );
+        $show = $coupon->get_meta( '_show_in_header_banner' );
+        
+        if ( $show === 'yes' ) {
+            echo '<span class="badge-banner badge-yes" style="background:#dcfce7;color:#15803d;padding:4px 8px;border-radius:12px;font-weight:600;font-size:11px;">★ Yes</span>';
+        } else {
+            echo '<span class="badge-banner badge-no" style="color:#94a3b8;font-size:12px;">—</span>';
+        }
+    }
+}
+
+/**
+ * Add a custom dropdown filter for Region on the WooCommerce Coupons list table.
+ */
+add_action( 'restrict_manage_posts', 'ulb_add_coupon_region_filter_dropdown', 25, 2 );
+function ulb_add_coupon_region_filter_dropdown( $post_type = '', $which = '' ) {
+    if ( ! is_admin() || 'shop_coupon' !== $post_type ) {
+        return;
+    }
+
+    $current = isset( $_GET['filter_coupon_region'] ) ? sanitize_text_field( $_GET['filter_coupon_region'] ) : '';
+
+    $regions = array(
+        'all'    => __( 'All Regions Only', 'woocommerce' ),
+        'india'  => __( 'India Store Only', 'woocommerce' ),
+        'global' => __( 'Global / UAE Store Only', 'woocommerce' ),
+    );
+
+    echo '<select name="filter_coupon_region" id="filter_coupon_region">';
+    echo '<option value="">' . __( 'Filter by Coupon Region', 'woocommerce' ) . '</option>';
+    
+    foreach ( $regions as $value => $label ) {
+        printf( 
+            '<option value="%s" %s>%s</option>', 
+            esc_attr( $value ), 
+            selected( $current, $value, false ), 
+            esc_html( $label ) 
+        );
+    }
+    echo '</select>';
+}
+
+/**
+ * Filter coupons list by the selected region in the request query.
+ */
+add_filter( 'request', 'ulb_filter_coupons_by_region_request' );
+function ulb_filter_coupons_by_region_request( $vars ) {
+    global $pagenow;
+
+    if ( is_admin() && $pagenow === 'edit.php' && isset( $vars['post_type'] ) && 'shop_coupon' === $vars['post_type'] && ! empty( $_GET['filter_coupon_region'] ) ) {
+        $filter_region = sanitize_text_field( $_GET['filter_coupon_region'] );
+        if ( $filter_region === 'all' ) {
+            $vars['meta_query'][] = array(
+                'relation' => 'OR',
+                array(
+                    'key'     => '_coupon_region_restriction',
+                    'value'   => 'all',
+                    'compare' => '=',
+                ),
+                array(
+                    'key'     => '_coupon_region_restriction',
+                    'compare' => 'NOT EXISTS',
+                ),
+            );
+        } else {
+            $vars['meta_query'][] = array(
+                'key'     => '_coupon_region_restriction',
+                'value'   => $filter_region,
+                'compare' => '=',
+            );
+        }
+    }
+    return $vars;
 }
 
